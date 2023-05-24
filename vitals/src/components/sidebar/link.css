@@ -1,0 +1,38 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+  *{
+    font-family: 'Lato', 'Helvetica Neue',;
+    font-size: 16px;
+  }
+
+
+
+.link{
+    display: grid;
+    gap: 4px;
+}
+.link div{
+    width: 100%;
+    padding: 10px 10px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: all ease-in-out .4s;
+
+}
+.link div:hover{
+    background-color: #2196F3;
+    border-radius: 2px;
+    width: 100%;
+    padding: 10px 10px;
+}
+.link a{
+    text-decoration: none;
+    font-weight: 300;
+
+}
+.link a div{
+    color: #fff;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+    
+}

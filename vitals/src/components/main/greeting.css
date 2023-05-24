@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+*{
+  font-family: 'Lato', 'Helvetica Neue',;
+  font-size: 16px;
+}
+
+
+.greeting-container{
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.greeting{
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+    color: #000;
+}
+.greeting h3{
+    font-size: 32px;
+}
+.greeting h3 span{
+    font-size: 30px;
+}
+.greeting p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.buttons .share{
+    background: #fff;
+    border: .5px solid #777777;
+    border-radius: 8px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    height: 40px;
+    font-weight: 300;
+    font-size: 14px;
+}
+.buttons .download{
+    background: #1976D2;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    height: 40px;
+    font-weight: 300;
+    font-size: 14px;
+}
