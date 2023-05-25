@@ -1,5 +1,5 @@
 import React from 'react'
-import './greeting.css'
+import './main.css'
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
 
 export default function Greeting() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import './vitals.css'
+import './main.css'
 import BloodtypeOutlinedIcon from '@mui/icons-material/BloodtypeOutlined';
 import MonitorHeartOutlinedIcon from '@mui/icons-material/MonitorHeartOutlined';
 import GasMeterOutlinedIcon from '@mui/icons-material/GasMeterOutlined';
