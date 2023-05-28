@@ -1,5 +1,5 @@
 import React from 'react'
-import './hospitalhistory.css'
+import './main.css'
 import FilterListOutlinedIcon from '@mui/icons-material/FilterListOutlined';
 
 export default function hospitalhistory() {

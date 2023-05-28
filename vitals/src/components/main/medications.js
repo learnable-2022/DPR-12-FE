@@ -1,5 +1,5 @@
 import React from 'react'
-import './medications.css'
+import './main.css'
 
 export default function medications() {
   return (
