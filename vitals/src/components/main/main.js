@@ -14,6 +14,7 @@ export default function main() {
         <div className='main-lower'>
             <Medications />
             <HospitalHistory />
+            
         </div>
     </div>
     

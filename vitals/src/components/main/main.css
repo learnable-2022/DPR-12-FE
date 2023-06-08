@@ -109,6 +109,11 @@
     -moz-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
 }
+.vitals{
+  display: flex;
+  justify-content: space-between;
+
+}
 .vitals h3{
     font-size: 20px;
 }
