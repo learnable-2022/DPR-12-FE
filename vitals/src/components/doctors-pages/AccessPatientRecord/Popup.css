@@ -1,0 +1,101 @@
+
+
+
+
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner{
+    /* position: absolute; */
+    margin: auto;
+    width: 100%;
+    max-width: 640px;
+    height: 300px;
+    background: #fff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 35px;
+
+}
+
+.popup-btns{
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    margin: auto;
+}
+
+.popup-inner .close-btn{
+    margin: auto;
+    width: 120px;
+    height: 45px;
+    font-size: 12px;
+    font-weight: 300;
+    background: #fff;
+    color: #1976D2;
+    border-radius: 8px;
+    border: .5px solid #1976D2;
+    outline: none;
+    cursor: pointer;
+    
+    
+}
+.popup-inner .access-btn{
+    margin: auto;
+    background: #1976D2;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 0 10px;
+    /* position: absolute; */
+    width: 120px;
+    height: 45px;
+    font-size: 12px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.pop-text{
+    margin: auto;
+    text-align: center;
+    color: #777777;
+    font-size: 35px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.wallet-input{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.wallet-input input{
+    width: 500px;
+}
+
+.wallet-input input::placeholder{
+    font-size: 14px;
+}
+.wallet-input input:focus{
+    outline: none;
+}
+.metamask{
+    width: 80px;
+}

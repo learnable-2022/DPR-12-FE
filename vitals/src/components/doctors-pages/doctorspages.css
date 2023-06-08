@@ -1,0 +1,172 @@
+
+
+
+/* ---------------------------------- access patient page ------------------------------------ */
+
+
+.main-access{
+    background-color: #ffffff;
+    height: 100vh;
+    width: 100%;
+    max-width: 1150px;
+    padding: 24px 70px;
+    font-family: 'Lato', 'Helvetica Neue',;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+}
+.access-patients-main{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+}
+
+
+
+/* -----ACCESS TOP STYLING---------------------------------------------------------------- */
+
+
+.access-directory{
+    font-size: 12px;
+    font-weight: 300;
+}
+.access-top{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.search-side .large-inputs{
+    width: 600px !important;
+}
+.search-side input::placeholder{
+    font-weight: 300;
+}
+.search-side input:focus{
+    outline: none !important;
+}
+
+.profile-side{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+/* ----------- PATIENTS STYLING   ------------------------- */
+
+
+.patient-profile-details{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.patient-profile-details .profile-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.avatar{
+    width: 60px;
+}
+.patient-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.patient-btns{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+/* ----------------------------------- dashboard page --------------------------------------- */
+
+
+.text-side{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.dash-mid-container{
+    border-radius: 10px;
+    padding: 32px 40px;
+    height: fit-content;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+    /* -webkit-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75); */
+}
+.dash-doc{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.doctor-details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.doc-details{
+   width: 200px;
+}
+.doc-details h4{
+    width: 600px;
+    max-width: 600px;
+    font-size: 25px;
+    letter-spacing: .5px;
+}
+.doc-details label{
+    width: fit-content;
+}
+.doc-info{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.doc-info label{
+    font-size: 12px;
+    font-weight: 300;
+}
+.doc-info p{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.doc-img{
+    width: 120px;
+}
+.doc-status{
+    background: #E3F2FD;
+    width: 300px;
+    max-width: 400px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 300;
+    color: #0D47A1;
+    margin-left: 10px;
+    border-radius: 8px;
+}
+
+/* ------------ DASH - BOTTOM -------------------------------- */
+
+.dash-bottom-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dash-table{
+    color: red;
+}

@@ -11,6 +11,7 @@ export default function vitals() {
     <div className='vitals-container'> 
         <div className='vitals'>
             <h3>Vitals Signs</h3>
+            <h3>10/06/2023</h3>
         </div>
         <div className='sign-container'>
             <div className='sign'>

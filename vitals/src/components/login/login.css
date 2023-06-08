@@ -1,0 +1,93 @@
+
+
+
+
+
+.top-bar{
+    height: fit-content;
+    width: 100%;
+    padding: 25px 55px;
+    background-color: #1976D2;
+    text-align: center;
+}
+.topbar-img{
+    width: 120px;
+}
+
+
+/* --------------BODY STYLING----------------------- */
+
+
+.body-container{
+    padding: 55px 125px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    align-items: center;
+}
+
+.body-text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.body-text h3{
+    font-size: 30px;
+}
+.body-text p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.body-box-container{
+    display: flex;
+    gap: 40px;
+}
+.body-box{
+    height: fit-content;
+    width: fit-content;
+    padding: 60px 40px;
+    border-radius: 10px;
+    background-color: #E3F2FD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    transition: all ease-in-out .5s;
+}
+.body-box:hover{
+    background-color: #ffcc80;
+    color: #121212;
+    font-weight: 300;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.body-box img{
+    width: 180px;
+}
+.body-link{
+    text-decoration: none;
+    color: #121212;
+    transition: all ease-in-out .5s;
+}
+.body-link:hover{
+    transform: scale(1.05);
+}
+
+.login{
+    text-decoration: none;
+    color: #121212;
+    font-weight: 300;
+    cursor: pointer;
+
+}
+.login:hover{
+    text-decoration: underline solid #121212 10%;
+    color: #121212;
+    font-weight: 300;
+    cursor: pointer;
+
+}
+.login span{
+    color: #1976D2;
+    font-weight: 400;
+}
