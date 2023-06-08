@@ -15,6 +15,7 @@ import HospitalLogin from './components/login/hospital-login/hospitallogin';
 import AccessPatientRecords from './components/doctors-pages/AccessPatientRecord/AccessPatientRecords';
 import DrDashboard from './components/doctors-pages/Dashboard/Dashboard';
 import Appointments from './components/patient-pages/Appointments/Appointments';
+import Records from './components/doctors-pages/Records/Records';
 
 
 
@@ -44,9 +45,9 @@ function App() {
           <Routes>
           <Route path='/doctor-login' element={<DoctorLogin />} />
           <Route path='/doctor-register' element={<DoctorRegister />} />
-          <Route path='/patientrecords' element={<AccessPatientRecords />} />
-          <Route path='/doctordashboard' element={<DrDashboard />} />
-            
+          <Route path='/doctordashboard' element={<DrDashboard />} />   
+          <Route path='/patients' element={<AccessPatientRecords />} />
+          <Route path='/records' element={<Records />} />
           </Routes>
 
   {/* ---------------------- HOSPITAL'S ROUTES -------------------- */}

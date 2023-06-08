@@ -5,7 +5,8 @@
 
 
 .main-access{
-    background-color: #ffffff;
+    overflow-y: scroll;
+    background-color: #fafafa;
     height: 100vh;
     width: 100%;
     max-width: 1150px;
@@ -13,7 +14,7 @@
     font-family: 'Lato', 'Helvetica Neue',;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     position: absolute;
 }
 .access-patients-main{
@@ -96,6 +97,8 @@
     align-items: center;
 }
 .dash-mid-container{
+    display: flex;
+    gap: 20px;
     border-radius: 10px;
     padding: 32px 40px;
     height: fit-content;
@@ -169,4 +172,88 @@
 
 .dash-table{
     color: red;
+}
+
+.wallet-text{
+    font-size: 14px;
+}
+.wallet-txt{
+    font-size: 18px;
+    font-weight: 300;
+    color: green;
+}
+.wallet-text span{
+    margin-left: 10px;
+}
+
+
+
+/* ---------------------------------------------------- */
+.record-main{
+    display: flex;
+    gap: 20px;
+}
+.title-side{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.title-side h4{
+    font-size: 25px;
+    font-weight: 400;
+}
+.title-side p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.drug-text{
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.red-label{
+    font-size: 16px;
+    color: #DA7C79;
+}
+.green-label{
+    font-size: 16px;
+    color: #85D591;
+}
+.frequency{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.freq{
+    font-size: 14px;
+    font-weight: 400;
+}
+.add-btn{
+    background-color: #1565C0;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 15px 30px;
+    letter-spacing: .5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+    text-decoration: none;
+    max-width: 200px;
+    right: 100%;
+}
+.add-btn:hover{
+    background-color: #fff;
+    border: .5px solid #1565C0;
+    outline: none;
+    color: #1565C0;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 15px 30px;
+    letter-spacing: .5px;
+    border-radius: 10px;
+    cursor: pointer;
 }

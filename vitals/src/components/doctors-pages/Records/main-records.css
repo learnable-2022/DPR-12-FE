@@ -162,7 +162,7 @@
 
 
 .medications-container{
-  width: 420px;
+  width: 495px;
   height: fit-content;
   padding: 24px 40px;
   border-radius: 10px;
@@ -197,7 +197,7 @@
   width: 20px;
 }
 .drug-name{
-  font-size: 16px;
+  font-size: 14px;
 }
 .dose{
   font-size: 12px;

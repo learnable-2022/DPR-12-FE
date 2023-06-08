@@ -35,14 +35,14 @@ export default function Sidebar() {
       <Links />
       
       <div className='details-container'>
-        <div className='details'>
+        <Link to={'/patientdashboard'}><div className='details'>
             <img src={sarah} alt="profile" />
             <div>
                 <p className='name'>Sarah</p>
                 <p className='email'>omaasa@team12.com</p>
             </div>
             <button onClick={Logout()}><LogoutOutlinedIcon /></button>
-        </div>
+        </div></Link>
       </div>
 
       

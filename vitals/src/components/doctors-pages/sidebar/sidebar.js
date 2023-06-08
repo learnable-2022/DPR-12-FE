@@ -19,9 +19,11 @@ export default function Sidebar() {
                 <input type="text" />
                 <button type='submit'>Search</button>
             </form>
+
+            <Links />
       </div> 
 
-      <Links />
+      
       
       <div className='details-container'>
         <div className='details'>
@@ -30,7 +32,7 @@ export default function Sidebar() {
                 <p className='name'>Dr. Jonathan .A.</p>
                 <p className='email'>jon-ani@esuth.com</p>
             </div>
-            <button><LogoutOutlinedIcon className='logout-icon' /></button>
+            <Link to={'/doctor-login'}><button><LogoutOutlinedIcon className='logout-icon' /></button></Link>
         </div>
       </div>
 
