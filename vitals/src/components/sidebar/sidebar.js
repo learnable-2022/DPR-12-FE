@@ -5,7 +5,7 @@ import Links from './links.js'
 import logo from '../../images/VitalsLogo.svg'
 import sarah from '../../images/sarah.svg'
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-import './sidebar.css'
+import './sidebar-pat.css'
 
 
 export default function Sidebar() {

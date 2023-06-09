@@ -6,7 +6,7 @@ import Links from './links.js'
 import logo from '../../../images/VitalsLogo.svg'
 import ani from '../../../images/dr.ani.svg'
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-import './sidebar.css'
+import './sidebar-doc.css'
 
 
 export default function Sidebar() {
@@ -14,7 +14,7 @@ export default function Sidebar() {
     <div className='sidebar'>
       <Link to="/" ><img src={logo} alt='logo' /> </Link>
 
-      <div className='side-container'>    
+      <div className='sidez-container'>    
             <form  className='searchbar'>
                 <input type="text" />
                 <button type='submit'>Search</button>

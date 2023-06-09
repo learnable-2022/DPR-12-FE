@@ -5,7 +5,7 @@ import '../..//doctors-pages/doctorspages.css'
 export default function RecordBLeft() {
   return (
     <div>
-      <div className='medications-container'>
+      <div className='medicationz-container'>
         <div className='medications'>
             <h3>Medications</h3>
 

@@ -8,9 +8,10 @@ export default function DashboardMid() {
 
     const [walletAddress, setWalletAddress] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
+    const [message, setMessage] = useState("");
 
     async function requestAccount() {
-      console.log('requesting account')
+      setMessage('requesting account...')
 
        // Check if MetaMask exists
 
@@ -23,6 +24,7 @@ export default function DashboardMid() {
           });
 
           setWalletAddress(accounts[0]);
+          setMessage("Wallet Connected");
         }catch (error){
           console.log("Error connecting to MetaMask")
         }
@@ -75,6 +77,7 @@ export default function DashboardMid() {
             </div>
             <div>
               <p className='wallet-text'>Wallet Address: <span className='wallet-txt'>{walletAddress}</span></p>
+              <p className='green'>{message}</p>
               <p className='error-text'>{errorMessage}</p>
             </div>
         </div>

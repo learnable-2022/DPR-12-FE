@@ -1,5 +1,5 @@
 import React from 'react'
-import './sidebar.css'
+import './sidebar-pat.css'
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
 import FolderSharedOutlinedIcon from '@mui/icons-material/FolderSharedOutlined';
 import CalendarMonthOutlinedIcon from '@mui/icons-material/CalendarMonthOutlined';

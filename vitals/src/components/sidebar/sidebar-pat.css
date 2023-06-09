@@ -2,7 +2,7 @@
 
 
 .sidebar{
-    position: relative;
+    position: fixed;
     background-color: #073985;
     height: 100vh;
     width: 100%;
@@ -26,13 +26,11 @@
 
 
 
-.side-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+/* .container {
+    background: #000;
+    padding: 10px;
     width: 100%;
-    margin-top: -60px;
-}
+} */
 
 
 .searchbar input{
@@ -42,8 +40,12 @@
     padding: 10px 15px;
     border-radius: 6px;
     font-family: 'Lato', 'Helvetica Neue',;
-    font-size: 16px;
-    font-weight: 100;
+    font-size: 14px;
+    font-weight: 300 !important;
+}
+.searchbar input::placeholder{
+    font-size: 14px;
+    font-weight: 300;
 }
 .searchbar button{
     padding: 7px 12px;
@@ -115,7 +117,6 @@
 }
 .details-container{
     border-top: .7px solid #fff;
-    margin-bottom: -20px;
     padding: 15px 0;
 }
 
@@ -124,17 +125,14 @@
     color: #fff;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 100%;
+    gap: 15px;
+    max-width: 100%;
 }
 .details button{
     background: none;
     outline: none;
     border: none;
     color: #fff;
-}
-.details-details{
-    width: 200px;
 }
 .name{
     font-size: 18px;
@@ -144,7 +142,4 @@
     font-size: 14px;
     font-weight: 300;
 }
-/* .logout-icon{
-    margin-left: 0px;
-} */
 

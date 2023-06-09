@@ -11,7 +11,7 @@ export default function Greeting() {
       </div>
       <div className='buttons'>
         <button className='share'> <FileUploadOutlinedIcon />Share</button>
-        <button className='download'>Download CSV</button>
+        <button className='download'>Connect Wallet</button>
       </div>
     </div>
   )
