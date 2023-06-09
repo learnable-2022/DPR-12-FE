@@ -1,0 +1,152 @@
+  
+  .container {
+    background: #fafafa;
+    /* border: 10px solid #fafafa; */
+    font-family: "Lato", sans-serif;
+    display: flex;
+  }
+  
+  .body {
+    background: #fafafa;
+    overflow-y: scroll;
+    width: 100%;
+    justify-content: center;
+    padding: 55px 95px;
+  }
+
+  .title h3{
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .heading {
+    font-size: 25px;
+  }
+  
+  .heading h3 {
+    font-weight: 400;
+  }
+  
+  .subheading {
+    color: #6B7280;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  
+  .subheading h4 {
+    font-weight: 500;
+  }
+  
+  .signz {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signs {
+    margin-top: 20px;
+  }
+  
+  .input1 {
+    margin-top: 15px;
+  }
+  
+  .inputz {
+    margin-top: 15px;
+  }
+  
+  
+  .signz > .inputz > textarea {
+    height: 200px;
+    border-radius: 5px;
+    width: 80%;
+    border: 1px solid;
+    vertical-align: top;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .signz > .inputz > textarea::placeholder{
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .signz > .inputz > textarea:focus{
+    outline: none;
+  }
+  
+  .signs > .inputz > textarea {
+    height: 200px;
+    border-radius: 5px;
+    width: 80%;
+    border: 1px solid;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .signs > .inputz > textarea::placeholder{
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .signs > .inputz > textarea:focus{
+    outline: none;
+  }
+  
+  .vitalz {
+    margin-top: 20px;
+    width: 83%;
+  }
+  
+  .vinputs {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  
+  .input-title h4{
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .input-bar textarea {
+    margin-top: 15px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 250px;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 15px 15px;
+  }
+  .input-bar textarea::placeholder{
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .input-bar textarea:focus{
+    outline: none;
+  }
+  
+  .btns {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: right;
+    width: 83%;
+  }
+  
+  
+  .btns input {
+    display: flex;
+    width: 105px;
+    height: 35px;
+    background: #1976D2;
+    border: solid 1px#1976D2;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .btn {
+    margin-right: 20px;
+  }
