@@ -128,6 +128,9 @@
     gap: 15px;
     max-width: 100%;
 }
+.details img{
+  width: 50px;
+}
 .details button{
     background: none;
     outline: none;

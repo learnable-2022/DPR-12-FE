@@ -5,10 +5,11 @@ export default function Table() {
 
     const data = [
         {filename: "Sarah Umeh", hmo:"FMC Jabi", current:"30/05/23", last:"May 23rd,2023"},
-        {filename: "Sarah Umeh", hmo:"FMC Jabi", current:"30/05/23", last:"May 23rd,2023"},
-        {filename: "Sarah Umeh", hmo:"FMC Jabi", current:"30/05/23", last:"May 23rd,2023"},
-        {filename: "Sarah Umeh", hmo:"FMC Jabi", current:"30/05/23", last:"May 23rd,2023"},
-        {filename: "Sarah Umeh", hmo:"FMC Jabi", current:"30/05/23", last:"May 23rd,2023"}
+        {filename: "Ifeanyi Okafor", hmo:"UITH, Ibadan", current:"30/05/23", last:"May 23rd,2023"},
+        {filename: "Uchenna Mayowa", hmo:"ROA Hospital", current:"30/05/23", last:"May 23rd,2023"},
+        {filename: "Valentina Chidumeh", hmo:"UNTH", current:"30/05/23", last:"May 23rd,2023"},
+        {filename: "Emmanuella Simon", hmo:"FMC Jabi", current:"30/05/23", last:"May 23rd,2023"},
+        {filename: "Jennifer Muo", hmo:"FMC Jabi", current:"30/05/23", last:"May 23rd,2023"}
     ]
     const columns = [
         {

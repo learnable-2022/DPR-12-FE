@@ -1,8 +1,12 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import Popup from './Popup'
 import './Popup.css'
+import RecordTop from '../Records/RecordTop';
+import patientsData from '../../../patientsData.json'
 
 export default function Patient(props) {
+
   
   const handleCancel = () => {
     console.log('Cancel button clicked');
@@ -16,7 +20,13 @@ export default function Patient(props) {
   };
 
   
-  const [buttonPopup, setButtonPopup] = useState(false)
+  // const [buttonPopup, setButtonPopup] = useState(false)
+  const navigate = useNavigate();
+
+  const handleNavigate =() => {
+    // navigate('/patientrecords');
+    navigate(`/patientrecords?patientId=${patientsData.PatientID}`);
+  }
 
   return (
     <main className='main-patient'>
@@ -31,20 +41,22 @@ export default function Patient(props) {
         </div>
         <div className='patient-actions'>
             <div className='patient-btns'>
-                <button onClick={() => setButtonPopup(true)} className='nav-btn'>View Medical Records</button>
-                <button onClick={() => setButtonPopup(true)} className='nav-btn'>View Profile</button>
+                <button onClick={handleNavigate} className='share-btn'>View Medical Records</button>
+                {/* <button onClick={() => setButtonPopup(true)} className='nav-btn'>View Profile</button> */}
             </div>
         </div>
       </div>
     </div>
 
-    <Popup trigger={buttonPopup} setTrigger={setButtonPopup} >
+    {/* <Popup trigger={buttonPopup} setTrigger={setButtonPopup} >
       <p className='popup-text'>{props.name} has to give you permission to view and edit their medical records</p>
     </Popup>
 
     <Popup trigger={buttonPopup} setTrigger={setButtonPopup} >
       <p className='popup-text'>{props.name} has to give you permission to view and edit their medical records</p>
-    </Popup>
+    </Popup> */}
+
+
 
     </main>
   )

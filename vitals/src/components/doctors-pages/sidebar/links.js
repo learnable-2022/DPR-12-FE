@@ -21,13 +21,13 @@ export default function Links() {
       <Link to={'/patients'}><div> <FolderSharedOutlinedIcon /> Patients</div></Link>
       {/* <a href="http://google.com"><div> <CalendarMonthOutlinedIcon />Appointments</div></a> */}
       <a href="/patientrecords"><div> <LayersOutlinedIcon />Records</div></a>
-      <a href="/accesscontrol"><div> <OutlinedFlagIcon />Access Control</div></a>
-      <a href="http://google.com"><div> <AnalyticsOutlinedIcon />Analytics</div></a>
-      <a href="http://google.com"><div> <PersonAddOutlinedIcon />Registration</div></a>
-      <a href="http://google.com"><div> <HealthAndSafetyOutlinedIcon />Clinics</div></a>
-      <a href="http://google.com"><div> <PaymentsOutlinedIcon />Billings</div></a>
+      {/* <a href="/accesscontrol"><div> <OutlinedFlagIcon />Access Control</div></a> */}
+      {/* <a href="http://google.com"><div> <AnalyticsOutlinedIcon />Analytics</div></a> */}
+      {/* <a href="http://google.com"><div> <PersonAddOutlinedIcon />Registration</div></a> */}
+      {/* <a href="http://google.com"><div> <HealthAndSafetyOutlinedIcon />Clinics</div></a> */}
+      {/* <a href="http://google.com"><div> <PaymentsOutlinedIcon />Billings</div></a> */}
       <a href="http://google.com"><div> <PeopleOutlinedIcon />Users</div></a>
-      <a href="http://google.com"><div> <SettingsOutlinedIcon />Settings</div></a>
+      {/* <a href="http://google.com"><div> <SettingsOutlinedIcon />Settings</div></a> */}
     </div>
   )
 }

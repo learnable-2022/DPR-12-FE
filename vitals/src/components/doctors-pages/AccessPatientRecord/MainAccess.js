@@ -3,6 +3,8 @@ import Patient from './Patient'
 import AccessTop from './AccessTop'
 
 export default function MainAccess(props) {
+
+  
   return (
     <div>
         

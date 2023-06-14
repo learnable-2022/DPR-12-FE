@@ -12,12 +12,12 @@ import './sidebar-doc.css'
 export default function Sidebar() {
   return (
     <div className='sidebar'>
-      <Link to="/" ><img src={logo} alt='logo' /> </Link>
 
       <div className='sidez-container'>    
+      <Link to="/" ><img src={logo} alt='logo' /> </Link>
             <form  className='searchbar'>
-                <input type="text" />
-                <button type='submit'>Search</button>
+                <input type="text" placeholder='Search' />
+                {/* <button type='submit'>Search</button> */}
             </form>
 
             <Links />

@@ -10,12 +10,14 @@
     height: 100vh;
     width: 100%;
     max-width: 1150px;
-    padding: 24px 70px;
+    padding: 24px 50px;
     font-family: 'Lato', 'Helvetica Neue',;
     display: flex;
     flex-direction: column;
     gap: 30px;
     position: absolute;
+    margin-left: 300px;
+
 }
 .access-patients-main{
     position: relative;
@@ -79,11 +81,38 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 10px 0px;
+    padding-right: 50px;
 }
 .patient-btns{
     display: flex;
     gap: 10px;
+}
+.share-btn{
+    background-color: transparent;
+    border: 1px solid #1565C0;
+    outline: none;
+    color: #1565C0;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 15px 30px;
+    letter-spacing: .5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+    text-decoration: none;
+}
+.share-btn:hover{
+    background-color: #fff;
+    border: .5px solid #1565C0;
+    outline: none;
+    color: #1565C0;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 15px 30px;
+    letter-spacing: .5px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 
@@ -121,7 +150,8 @@
     gap: 20px;
 }
 .doc-details{
-   width: 200px;
+   width: 400px;
+   display: flex;
 }
 .doc-details h4{
     width: 600px;
@@ -156,9 +186,16 @@
     padding: 5px 10px;
     font-size: 12px;
     font-weight: 300;
-    color: #0D47A1;
+    color: red;
     margin-left: 10px;
     border-radius: 8px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.dot{
+    color: red;
+    font-size: 18px;
 }
 
 /* ------------ DASH - BOTTOM -------------------------------- */
@@ -256,4 +293,201 @@
     letter-spacing: .5px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+
+
+
+/* ------------UPDATE RECORD -------------------------------- */
+
+
+.update-container{
+    /* position: absolute; */
+    display: flex;
+    /* overflow-y: scroll; */
+}
+.main-update-container{
+    margin-left: 300px;
+    display: flex;
+    overflow-y: scroll;
+}
+
+.main-update{
+    /* overflow-y: scroll; */
+    background-color: #fafafa;
+    height: 100vh;
+    width: 79%;
+    /* max-width: 1150px; */
+    padding: 24px 50px;
+    font-family: 'Lato', 'Helvetica Neue',;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+}
+
+
+/* --------------------MULTISTEPFORM-------------------------------- */
+
+.step-indicator {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-bottom: 20px;
+  }
+  .step-indicator div{
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .step {
+    padding: 25px;
+    width: 100%;
+    height: 80px;
+    /* border-radius: 50%; */
+    background-color: #fff;
+    border-bottom: 5px solid #E3F2FD;
+    border-radius: 2px;
+  }
+  
+  .step.active {
+    
+    border-bottom: 5px solid #1565C0;
+    border-radius: 2px;
+    /* background-color: blue; */
+  }
+  
+  .step-heading {
+    margin-bottom: 10px;
+  }
+
+
+
+
+
+
+  .vitalsigns-container{
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+  }
+  .vitalsigns{
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+  }
+
+  .vitalsigns-1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .v-sign{
+    display: flex;
+    flex-direction: column;
+  }
+  .v-sign label{
+    font-size: 14px;
+  }
+  .v-sign input{
+    width: 300px;
+    height: 48px;
+    border: .5px solid #1565C0;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .v-sign input:focus{
+    outline: none;
+    /* border: none; */
+  }
+  .vitalsigns-btn{
+    justify-content: right;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    padding-right: 25px;
+  }
+
+  .van-btn{
+    background-color: transparent;
+    border: .5px solid #1565C0;
+    outline: none;
+    color: #1565C0;
+    font-size: 12px;
+    font-weight: 300;
+    padding: 15px 30px;
+    letter-spacing: .5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+    text-decoration: none;
+}
+.van-btn:hover{
+    background-color: #fff;
+    border: .5px solid #1565C0;
+    outline: none;
+    color: #1565C0;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 15px 30px;
+    letter-spacing: .5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+.diseases-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+
+.disease-1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.disease-1 label{
+    font-size: 14px;
+}
+.disease-1 input{
+    width: 100%;
+    height: 48px;
+    border: .5px solid #1565C0;
+    border-radius: 5px;
+    padding: 10px;
+}
+.disease-1 input::placeholder{
+    font-size: 14px;
+}
+.disease-1 input:focus{
+    outline: none;
+}
+
+
+.disease-2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.disease-2 label{
+    font-size: 14px;
+}
+.disease-2 textarea{
+    width: 100%;
+    height: 98px;
+    border: .5px solid #1565C0;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+.disease-2 textarea::placeholder{
+    font-size: 14px;
+}
+.disease-2 textarea:focus{
+    outline: 0;
 }
