@@ -6,22 +6,24 @@ import Links from './links.js'
 import logo from '../../../images/VitalsLogo.svg'
 import ani from '../../../images/dr.ani.svg'
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-import './sidebar.css'
+import './sidebar-doc.css'
 
 
 export default function Sidebar() {
   return (
     <div className='sidebar'>
-      <Link to="/" ><img src={logo} alt='logo' /> </Link>
 
-      <div className='side-container'>    
+      <div className='sidez-container'>    
+      <Link to="/" ><img src={logo} alt='logo' /> </Link>
             <form  className='searchbar'>
-                <input type="text" />
-                <button type='submit'>Search</button>
+                <input type="text" placeholder='Search' />
+                {/* <button type='submit'>Search</button> */}
             </form>
+
+            <Links />
       </div> 
 
-      <Links />
+      
       
       <div className='details-container'>
         <div className='details'>
@@ -30,7 +32,7 @@ export default function Sidebar() {
                 <p className='name'>Dr. Jonathan .A.</p>
                 <p className='email'>jon-ani@esuth.com</p>
             </div>
-            <button><LogoutOutlinedIcon className='logout-icon' /></button>
+            <Link to={'/doctor-login'}><button><LogoutOutlinedIcon className='logout-icon' /></button></Link>
         </div>
       </div>
 

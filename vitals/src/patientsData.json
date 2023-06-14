@@ -1,0 +1,25 @@
+{
+  
+
+        
+            "PatientID": "64896e87de2effd59866973f",
+            "PatientFirstName": "Sarah",
+            "PatientLastName": "Umeh",
+            "PatientWalletAddress": "0x0b3860cdeb2c6fe884c857f8ec9e8daf259ed7dc",
+            "BloodPressure" : "BloodPressure",
+            "BloodSugar" : "BloodSugar",
+            "Temperature" : "Temperature",
+            "HeartRate" : "HeartRate",
+            "OxygenLevel" : "OxygenLevel",
+            "RespiratoryRate" : "RespiratoryRate",
+            "Disease": "Disease",
+            "DiseaseInformation": "Disease Information",
+            "DoctorName": "Doctor",
+            "Signs&Symptoms": "Signs and Symptoms",
+            "MedicationName": "Medication",
+            "Dosage": "Dosage",
+            "LabTests": "Lab Tests",
+            "WidalTestResults": "Widal Test Results"
+                
+        
+}

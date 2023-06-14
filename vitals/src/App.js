@@ -15,6 +15,12 @@ import HospitalLogin from './components/login/hospital-login/hospitallogin';
 import AccessPatientRecords from './components/doctors-pages/AccessPatientRecord/AccessPatientRecords';
 import DrDashboard from './components/doctors-pages/Dashboard/Dashboard';
 import Appointments from './components/patient-pages/Appointments/Appointments';
+import Records from './components/doctors-pages/Records/Records';
+import UpdateRecord from './components/doctors-pages/UpdateRecord';
+// import Update from './components/judon/UpdateRecords/Update'
+import AccessControl from './components/judon/Access/Access'
+// import Appointment from './components/judon/Appointments/Appointments'
+
 
 
 
@@ -35,6 +41,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/patient-login' element={<PatientLogin />} />
           <Route path='/patient-register' element={<PatientRegister />} />
+          <Route path='/accesscontrol' element={<AccessControl />} />
           
         </Routes>
 
@@ -44,9 +51,11 @@ function App() {
           <Routes>
           <Route path='/doctor-login' element={<DoctorLogin />} />
           <Route path='/doctor-register' element={<DoctorRegister />} />
-          <Route path='/patientrecords' element={<AccessPatientRecords />} />
-          <Route path='/doctordashboard' element={<DrDashboard />} />
-            
+          <Route path='/doctordashboard' element={<DrDashboard />} />   
+          <Route path='/patients' element={<AccessPatientRecords />} />
+          <Route path='/patientrecords' element={<Records />} />
+          <Route path='/updaterecords' element={<UpdateRecord />} />
+          {/* <Route path='/doctorappointments' element={<Appointment />} /> */}
           </Routes>
 
   {/* ---------------------- HOSPITAL'S ROUTES -------------------- */}

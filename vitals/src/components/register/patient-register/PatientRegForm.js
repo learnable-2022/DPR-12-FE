@@ -32,6 +32,33 @@ import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined
         const [confirm_password, setConfirm_Password] = useState('');
         const [error, setError] = useState('');
         const [message, setMessage] = useState('');
+        const [passwordVisible, setPasswordVisible] = useState(false);
+        const [isHovered, setIsHovered] = useState(false);
+
+
+        const handleMouseEnter = () => {
+            setIsHovered(true);
+        };
+
+        const handleMouseLeave = () => {
+            setIsHovered(false);
+        };
+
+        const inputStyle = {
+            background: 'none',
+            transition: 'all 0.5s ease-in-out',
+            // Set different styles when hovered
+            ...(isHovered && {
+            background: 'none',
+            color: '#1565C0',
+            }),
+        };
+
+
+
+        const handlePasswordVisibility = () => {
+            setPasswordVisible(!passwordVisible);
+        };
       
         const signUp = async (e) => {
           e.preventDefault();
@@ -45,8 +72,13 @@ import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined
             setError('Passwords do not match');
             return;
           }
+          if (password.length < 8) {
+            setError('Password must be at least 8 characters');
+            return;
+          }
           if (!/\S+@\S+\.\S+/.test(email)){
             setError('Please enter a valid email address');
+            return;
           }
       
           try {
@@ -201,14 +233,14 @@ return (
                                 <p>Password</p>
                                 <div className='pass-inputs'>
                                     <input
-                                        type="password"
+                                        type={passwordVisible ? 'text' : 'password'}
                                         placeholder='xxxxxxx'
                                         name='password' 
                                         value={password} 
                                         onChange={(e) => setPassword(e.target.value)}
                                     />
                                     
-                                        <VisibilityOffOutlinedIcon className='pass-icons' />
+                                        <VisibilityOffOutlinedIcon onClick={handlePasswordVisibility} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={inputStyle} className='pass-icons' />
                                 </div>
                                     {/* {errors.password && <p className="error-text" >{errors.password}</p>} */}
                             </div>
@@ -217,14 +249,14 @@ return (
                                 <p>Confirm Password</p>
                                 <div className='pass-inputs'>
                                     <input 
-                                        type="password"
+                                        type={passwordVisible ? 'text' : 'password'}
                                         placeholder='xxxxxxx'
                                         name='confirm_password'
                                         value={confirm_password}
                                         onChange={(e) => setConfirm_Password(e.target.value)}
                                     />
                                     
-                                            <VisibilityOffOutlinedIcon className='pass-icons' />
+                                            <VisibilityOffOutlinedIcon onClick={handlePasswordVisibility} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={inputStyle} className='pass-icons' />
                                 </div>
                                             {/* {errors.confirm_password && <p className="error-text" >{errors.confirm_password}</p>} */}
                             </div>

@@ -1,0 +1,358 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+*{
+  font-family: 'Lato', 'Helvetica Neue',;
+  font-size: 16px;
+}
+
+.main{
+    background-color: #ededed;
+    height: 100vh;
+    width: 100%;
+    padding: 24px 40px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    font-family: 'Lato', 'Helvetica Neue',;
+
+}
+.main-lower{ 
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+/* GREETING STYLING-------------------- */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+*{
+  font-family: 'Lato', 'Helvetica Neue',;
+  font-size: 16px;
+}
+
+
+.greeting-container{
+    width: 100%;
+    height: fit-content;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+.greeting{
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+    color: #000;
+}
+.greeting h3{
+    font-size: 32px;
+}
+.greeting h3 span{
+    font-size: 30px;
+}
+.greeting p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.buttons{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.buttons .share{
+    background: #fff;
+    border: .5px solid #777777;
+    border-radius: 8px;
+    outline: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    height: 40px;
+    font-weight: 300;
+    font-size: 14px;
+}
+.buttons .download{
+    background: #1976D2;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    outline: none;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    height: 40px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+/* VITALS STYLING---------------------------- */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+*{
+  font-family: 'Lato', 'Helvetica Neue',;
+  font-size: 16px;
+}
+
+.vitals-container{
+    width: 100%;
+    height: fit-content;
+    padding: 32px 40px;
+    border-radius: 10px;
+    gap: 20px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+    -webkit-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+}
+.vitals{
+  display: flex;
+  justify-content: space-between;
+
+}
+.vitals h3{
+    font-size: 20px;
+}
+.icon-container {
+    width: 56px;
+    height: 56px;
+    padding: 4px 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 28px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 28px -14px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 28px -14px rgba(0,0,0,0.75);
+}
+.sign-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sign{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.description p{
+    font-size: 18px;
+}
+.description small {
+    font-size: 14px;
+    font-weight: 300;
+    color: #777777;
+}
+
+
+/* MEDICATION STYLING ----------------- */
+
+
+
+
+
+.medicationz-container{
+  width: 495px;
+  height: fit-content;
+  padding: 24px 40px;
+  border-radius: 10px;
+  background: #fff;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+  -webkit-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.medications{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.medications h3{
+  font-weight: 400;
+}
+.today{
+  background: #fff;
+  border: .5px solid #777777;
+  outline: 0;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 6px;
+}
+.checkbox{
+  width: 20px;
+}
+.drug-name{
+  font-size: 14px;
+}
+.dose{
+  font-size: 12px;
+  font-weight: 300;
+}
+.drug-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.drug{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dosage{
+  display: flex;
+  gap: 15px;
+}
+.radio-group{
+  display: flex;
+  gap: 10px;
+}
+.radio + .radio{
+  margin-left: 40px;
+}
+.radio-group input[type="radio"]{
+  display: none;
+}
+.radio-group span{
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  border: 2.5px solid #42A5F5;
+  display: block;
+  position: relative;
+}
+.radio-group span::after{
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #42A5F5;
+  display: block;
+  position: absolute;
+  transform: translate(40%, 40%) scale(0);
+  border-radius: 50%;
+  transition: 300ms ease-in-out 0s;
+}
+.radio-group input[type="radio"]:checked ~ span::after{
+  transform: translate(40%, 40%) scale(1);
+}
+.last-item{
+  margin-bottom: 20px;
+}
+
+/* HOSPITAL HISTORY STYLING -------------- */
+
+
+
+
+.hospital-history{
+  display: flex;
+  flex-direction: column;
+}
+.history-container{
+  width: 100%;
+  height: fit-content;
+  padding: 24px 40px;
+  border-radius: 10px;
+  background: #fff;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+  -webkit-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.h-container{
+  border-radius: 10px;
+  background: #fff;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.history{
+  width: 100%;
+}
+.history h3{
+  font-weight: 400;
+}
+.history-container .visits{
+  display: flex;
+  font-size: 10px;
+  gap: 10px;
+  align-items: center;
+}
+
+.visits p{
+  font-size: 10px;
+}
+.buttons button{
+  background: #fff;
+  border: .5px solid #777777;
+  outline: 0;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  border-radius: 6px;
+}
+
+.green{
+  color: #85D591;
+}
+.bg-green{
+  background-color: #85D591;
+}
+.blue{
+  color: #1565C0;
+}
+.bg-blue{
+  background-color: #1565C0;
+}
+.red{
+  color: #e25b57;
+}
+.bg-red{
+  background-color: #e25b57;
+}
+.grey{
+  color: #6B7280;
+}
+.bg-grey{
+  background-color: #d9d9d9;
+}
+
+.indicator{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.row1{
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.row-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.month{
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 20px;
+}

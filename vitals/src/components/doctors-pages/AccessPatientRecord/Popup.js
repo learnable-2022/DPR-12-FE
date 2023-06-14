@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './Popup.css'
 import GppMaybeOutlinedIcon from '@mui/icons-material/GppMaybeOutlined';
 import metamask from '../../../images/metamask.png'
+import { Link } from 'react-router-dom';
 
 export default function Popup(props, {onCancel, onRequestAccess}) {
 
@@ -23,24 +24,26 @@ export default function Popup(props, {onCancel, onRequestAccess}) {
     // onCancel();
   };
 
-  const handleRequestAccess = () => {
-    console.log(walletAddress)
-    const apiUrl = `https://api.metamask.io/verify/${walletAddress}`;
+  // const handleRequestAccess = () => {
+
+  //   Navigate('/records')
+  //   console.log(walletAddress)
+  //   const apiUrl = `https://api.metamask.io/verify/${walletAddress}`;
   
-  fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-      if (data.valid) {
-        setVerificationStatus('success');
-      } else {
-        setVerificationStatus('fail');
-      }
-    })
-    .catch(error => {
-      console.error('Error verifying wallet:', error);
-      setVerificationStatus('fail');
-    });
-  };
+  // fetch(apiUrl)
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     if (data.valid) {
+  //       setVerificationStatus('success');
+  //     } else {
+  //       setVerificationStatus('fail');
+  //     }
+  //   })
+  //   .catch(error => {
+  //     console.error('Error verifying wallet:', error);
+  //     setVerificationStatus('fail');
+  //   });
+  // };
 
 
   return (props.trigger) ? ( 
@@ -51,11 +54,11 @@ export default function Popup(props, {onCancel, onRequestAccess}) {
 
     {showInputField ? (
         <div className='wallet-input'>
-          <img className='metamask' src={metamask} alt="metamask logo" />
-          <input className='large-inputs' type="text" value={walletAddress} onChange={handleInputFieldChange} placeholder='Enter Wallet Address' />
+          {/* <img className='metamask' src={metamask} alt="metamask logo" /> */}
+          <input className='large-inputs' type="text" value={walletAddress} onChange={handleInputFieldChange} placeholder='Enter OTP' />
           <div className='popup-btns'>
             <button onClick={handleCancel} className='close-btn'>Cancel</button>
-            <button onClick={handleRequestAccess}className='access-btn'>Submit</button>
+            <Link to='/records'><button className='access-btn'>Submit</button></Link>
           </div>
         </div>
       ) : (

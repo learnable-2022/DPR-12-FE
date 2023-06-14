@@ -24,6 +24,33 @@ const PatientLoginForm = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const inputStyle = {
+    background: 'none',
+    transition: 'all 0.5s ease-in-out',
+    // Set different styles when hovered
+    ...(isHovered && {
+      background: 'none',
+      color: '#1565C0',
+    }),
+  };
+
+
+
+  const handlePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
 
   const signIn = async (e) => {
     e.preventDefault();
@@ -40,17 +67,14 @@ const PatientLoginForm = () => {
         body: JSON.stringify({ email, password }),
       });
 
+      
       const data = await response.json();
-
-    //   console.log(data);
-
+      // console.log(data);
+      
       if (data.token) {
-        // Authentication successful, customize user experience
-        console.log(data.message);
-        console.log("Success");
         setMessage('Login Successful')
-        localStorage.setItem("user-info", JSON.stringify(data));
-        let token = localStorage.getItem("user-info");
+        localStorage.setItem("user", (data.token));
+        // let token = localStorage.getItem("user-info");
         navigate("/patientdashboard")
 
       } else {
@@ -87,11 +111,11 @@ const PatientLoginForm = () => {
                         <p>Password</p>
                         <div className='rightside-input'>
                             <input
-                                type="password" 
+                                type={passwordVisible ? 'text' : 'password'} 
                                 placeholder='xxxxxxxx' 
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-                            <VisibilityOffOutlinedIcon /></div>
+                            <VisibilityOffOutlinedIcon onClick={handlePasswordVisibility} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={inputStyle} /></div>
                     </div>
                     <div className='right-box' >
                         <div className='right-checkbox'>

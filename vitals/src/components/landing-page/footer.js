@@ -80,7 +80,7 @@ export default function Footer() {
                 </div>       
         </div>
                     
-        <p>© 2023 Vitals Inc. | Site Map | Terms | Privacy Policy | EHR Certification | EHR Status</p>
+        <p className='out-footer'>© 2023 Vitals Inc. | Site Map | Terms | Privacy Policy | EHR Certification | EHR Status</p>
 
         
     </footer>

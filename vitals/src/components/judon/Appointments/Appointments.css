@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    background: #f7f7f7;
+    border: 1px solid #f7f7f7;
+    font-family: "Lato", sans-serif;
+  }
+  
+  .body {
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    
+  }
+  
+  .title {
+    font-size: 25px;
+  }
+  
+  .subtitle {
+    color: #6B7280;
+    font-size: 18px;
+    margin-top: 5px;
+  }
+  
+  .block1 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .right {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    width: 65%;
+    background: white;
+  }
+  
+  .title1 {
+    padding-top: 20px;
+    margin-left: 20px;
+  }
+  
+  .innerb1 {
+    display: flex;
+    padding-bottom: 50px;
+  }
+  
+  .rt1 {
+    border: solid 1px #D9D9D9;
+    width: 60%;
+    height: 150px;
+    background: #D9D9D9;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+  
+  
+  .lt1 {
+    width: 35%;
+    height: 150px;
+    margin-left: 20px;
+    margin-top: 25px;
+  }
+  
+  .date {
+    color: grey;
+    font-size: 17px;
+  }
+  
+  .year {
+    margin-top: 5px;
+  }
+  
+  .date-btn {
+    border: #1976D2 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    width: 170px;
+    height: 40px;
+    border-radius: 5px;
+  }
+  
+  /*Block2 designs....*/
+  .block2 {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+    width: 65%;
+    border-radius: 5px 5px 0 0;
+    background: white;
+  }
+  
+  .head-text {
+    padding-top: 20px;
+    margin-left: 20px;
+    display: flex;
+  }
+  
+  .title-date {
+    margin-top: 5px;
+    margin-left: 15px;
+    background: #E3F2FD;
+    width: 90px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 20px;
+    color: #1976D2;
+  }
+  
+  table {
+    width: 100%;
+    /*border: solid black 1px;*/
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  
+  th {
+    border-bottom: 1px solid #EAECF0;
+    text-align: left;
+    /*padding-left: 20px;*/
+    height: 30px; 
+    color: #667085;
+    background: #F9FAFB;
+  }
+  
+  .pimage {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pname {
+    margin-left: 8px;
+  }
+  
+  .header {
+    padding-left: 20px;
+    width: 10%;
+  }
+  
+  .down {
+    padding-left: 5px;
+  }
+  
+  td {
+    border-bottom: 1px solid #EAECF0;
+    height: 50px;
+  }
+  
+  .check2 {
+    margin-left: 20px;
+  }
+  
+  .pimage {
+    display: flex;
+  }
+  
+  .pagination {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    width: 65%;
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    justify-content: space-between;
+    background: #EAECF0;
+    border: 0px solid #EAECF0;
+  }
+  
+  .previous {
+    margin-left: 20px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .previous button {
+    width: 100px;
+    height: 30px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .prev-btn {
+    margin-left: 10px;
+  }
+  
+  .numbers {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-cont {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .numbers button {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .numbers > .btn-cont >.no1 {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+  }
+  
+  .next {
+    margin-right: 20px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+  }
+  
+  .next button {
+    width: 100px;
+    height: 30px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nxt-btn {
+    margin-right: 10px;
+  }

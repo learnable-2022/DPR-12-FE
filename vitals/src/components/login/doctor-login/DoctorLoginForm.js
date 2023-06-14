@@ -24,6 +24,31 @@ const DoctorLoginForm = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const inputStyle = {
+    background: 'none',
+    // Set different styles when hovered
+    ...(isHovered && {
+      background: 'none',
+      color: '#1565C0',
+    }),
+  };
+
+
+  const handlePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
 
   const signIn = async (e) => {
     e.preventDefault();
@@ -40,21 +65,21 @@ const DoctorLoginForm = () => {
         body: JSON.stringify({ email, password }),
       });
 
-      const data = await response.json();
+      const docData = await response.json();
 
-    //   console.log(data);
+      console.log(docData);
 
-      if (data.token) {
+      if (docData.token) {
         // Authentication successful, customize user experience
-        console.log(data.message);
+        console.log(docData.message);
         console.log("Success");
         setMessage('Login Successful')
-        localStorage.setItem("user-info", JSON.stringify(data));
-        let token = localStorage.getItem("user-info");
+        // localStorage.setItem("user-info", JSON.stringify(data));
+        // let token = localStorage.getItem("user-info");
         navigate("/doctordashboard")
 
       } else {
-        setError('User does not exist');
+        setError('Doctor does not exist');
       }
     } catch (error) {
       setError(error.message);
@@ -65,7 +90,7 @@ const DoctorLoginForm = () => {
 
 
 
-        return(
+    return(
         <div>
             {message && <p className='error-success'>{message}</p>}
             {error && <p className='error-text'>{error}</p>}
@@ -87,11 +112,11 @@ const DoctorLoginForm = () => {
                         <p>Password</p>
                         <div className='rightside-input'>
                             <input
-                                type="password" 
+                                type={passwordVisible ? 'text' : 'password'} 
                                 placeholder='xxxxxxxx' 
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-                            <VisibilityOffOutlinedIcon /></div>
+                            <VisibilityOffOutlinedIcon onClick={handlePasswordVisibility} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={inputStyle} /></div>
                     </div>
                     <div className='right-box' >
                         <div className='right-checkbox'>
