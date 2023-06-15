@@ -11,7 +11,7 @@ export default function vitals() {
     <div className='vitals-container'> 
         <div className='vitals'>
             <h3>Vitals Signs</h3>
-            <h3>10/06/2023</h3>
+            {/* <h3>Today</h3> */}
         </div>
         <div className='sign-container'>
             <div className='sign'>
@@ -19,7 +19,7 @@ export default function vitals() {
                     <BloodtypeOutlinedIcon />
                 </div>
                 <div className='description'>
-                <p className='weight'>100 / 70 mmg</p>
+                <p className='weight'>N/A</p>
                 <small>Blood pressure</small>
                 </div>
             </div>
@@ -28,7 +28,7 @@ export default function vitals() {
                     <MonitorHeartOutlinedIcon />
                 </div>
                 <div className='description'>
-                <p className='weight'>89 bpm</p>
+                <p className='weight'>N/A</p>
                 <small>Heart Rate</small>
                 </div>
             </div>
@@ -37,7 +37,7 @@ export default function vitals() {
                     <GasMeterOutlinedIcon />
                 </div>
                 <div className='description'>
-                <p className='weight'>83 mg/d</p>
+                <p className='weight'>N/A</p>
                 <small>Blood Sugar</small>
                 </div>
             </div>
@@ -46,7 +46,7 @@ export default function vitals() {
                     <DeviceThermostatOutlinedIcon />
                 </div>
                 <div className='description'>
-                <p className='weight'>36.7</p>
+                <p className='weight'>N/A</p>
                 <small>Temperature</small>
                 </div>
             </div>
@@ -55,7 +55,7 @@ export default function vitals() {
                     <BlurOnOutlinedIcon />
                 </div>
                 <div className='description'>
-                <p className='weight'>98%</p>
+                <p className='weight'>N/A</p>
                 <small>Oxygen</small>
                 </div>
             </div>

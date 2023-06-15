@@ -18,11 +18,13 @@ export default function hospitalhistory() {
                 </div>
                 <div className='buttons'>
                     <button>2023</button>
-                    <button> <FilterListOutlinedIcon />Filters</button>
+                    <button> <FilterListOutlinedIcon style={{fontSize:'14px'}} />Filters</button>
                 </div> 
             </div>
 
-            <div className='indicators-container'>
+            <p className='light-text'>No Hospital History</p>
+
+            {/* <div className='indicators-container'>
                 <div className='row-container'>
                     <div className='row1'>
                         <div className='indicator bg-grey'></div>
@@ -84,16 +86,6 @@ export default function hospitalhistory() {
                         <div className='indicator bg-green'></div>
                         <div className='indicator bg-grey'></div>
                     </div>
-                    {/* <div className='row1'>
-                        <div className='indicator bg-grey'></div>
-                        <div className='indicator'></div>
-                        <div className='indicator'></div>
-                        <div className='indicator'></div>
-                        <div className='indicator'></div>
-                        <div className='indicator'></div>
-                        <div className='indicator bg-green'></div>
-                        <div className='indicator'></div>
-                    </div> */}
                     <div className='row1 last-item'>
                         <div className='month'>May</div>
                         <div className='month'>Jun</div>
@@ -105,7 +97,7 @@ export default function hospitalhistory() {
                         <div className='month'>Dec</div>
                     </div>
                 </div>
-            </div>   
+            </div>    */}
       </div>
             
       

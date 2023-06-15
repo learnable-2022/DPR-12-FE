@@ -1,0 +1,98 @@
+
+
+
+.notification-container{
+    display: flex;
+    background-color: #f1f1f1;
+    height: fit-content;
+    width: 100%;
+    
+}
+
+.main-notification{
+    width: 100%;
+    height: fit-content;
+    margin-left: 300px;
+    padding: 24px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.notification-header-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.notification-header-container p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.notification-header{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.notification-header h4{
+    font-size: 25px;
+    font-weight: 400;
+}
+.notification-header span{
+    width: fit-content;
+    height: fit-content;
+    padding: 7px 14px;
+    border-radius: 4px;
+    background-color: #1976D2;
+    color: #fff;
+}
+
+.notification-list-container{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.notification-list-container li{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.notification-list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between !important;
+    background: #FFF;
+    padding: 20px 15px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+}
+.notification-message{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.notification-message .label{
+    color: #1976D2;
+}
+.notification-time{
+    font-size: 14px;
+    font-weight: 300;
+}
+.notification-date{
+    width: 100px;
+}
+.notification-date span{
+    font-size: 14px;
+    font-weight: 300;
+    width: 100px;
+}
+.notification-content{
+    font-size: 16px;
+    font-weight: 300;
+}
+.notification-content span{
+    font-weight: 400;
+}

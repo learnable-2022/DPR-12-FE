@@ -10,7 +10,9 @@ export default function medications() {
             <button className='today'>Today</button>
         </div>
 
-        <div className='drug-container'>
+        <p className='light-text'>No Medical History</p>
+
+        {/* <div className='drug-container'>
             <div className='drug'>              
                 <div className='dosage'>
                     <input type='checkbox' className='checkbox' />
@@ -130,7 +132,7 @@ export default function medications() {
                     </label>                   
                 </div>
             </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )

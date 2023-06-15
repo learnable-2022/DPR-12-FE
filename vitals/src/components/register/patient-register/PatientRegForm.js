@@ -1,27 +1,9 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext} from 'react'
 import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+import { UserContext } from '../../patient-pages/UserContext';
 
 
 
-
-// export default function PatientRegForm() {
-
-    
-    // const [values, setValues] = useState({
-    //     firstName:"",
-    //     lastName:"",
-    //     email:"",
-    //     phoneNumber:"",
-    //     password:"",
-    //     confirm_password:"",
-    // })
-
-    // const [firstName, setFirstName] = useState("");
-    // const [lastName, setLastName] = useState("");
-    // const [email, setEmail] = useState("");
-    // const [phoneNumber, setPhoneNumber] = useState("");
-    // const [password, setPassword] = useState("");
-    // const [confirm_password, setConfirm_Password] = useState("");
 
     const PatientRegForm = () => {
         const [firstName, setFirstName] = useState('');
@@ -34,6 +16,19 @@ import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined
         const [message, setMessage] = useState('');
         const [passwordVisible, setPasswordVisible] = useState(false);
         const [isHovered, setIsHovered] = useState(false);
+
+        const { setUser } = useContext(UserContext);
+
+        // const handleSignup = (event) => {
+        //     event.preventDefault();
+        //     // Get user input from form
+        //     const firstName = event.target.elements.firstName.value;
+        //     const lastName = event.target.elements.lastName.value;
+        //     const email = event.target.elements.email.value;
+
+        //     // Set the user's name and email
+        //     setUser({ firstName, lastName, email });
+        // };
 
 
         const handleMouseEnter = () => {
@@ -102,6 +97,7 @@ import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined
 
                 console.log(data.message);
                 setMessage('Account Created Successfully... Proceed to Login');
+                setUser({ firstName, lastName, email, phoneNumber, password, confirm_password});
 
             } else {
                 setMessage('User already registered')
@@ -110,6 +106,12 @@ import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined
           } catch (error) {
             setError(error.message);
           }
+
+                // const firstName = e.target.elements.firstName.value;
+                // const lastName = e.target.elements.lastName.value;
+                // const email = e.target.elements.email.value;
+
+                
         };
       
 

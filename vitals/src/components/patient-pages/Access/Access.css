@@ -3,67 +3,59 @@
     margin: 0;
   }
   
-  .containerz {
+  .container {
     background: #f7f7f7;
     font-family: "Lato", sans-serif;
-    display: flex;
   }
   
-  .bodyz {
+  .body {
     font-family: "Lato", sans-serif;
-    margin-left: 300px;
-    padding: 40px;
   
   }
   
-  .titlez {
-    font-size: 25px;
-  }
-  .title-sidez h3{
-    font-weight: 400;
+  .title {
     font-size: 25px;
   }
   
-  .subtitlez {
+  .subtitle {
     color: #6B7280;
-    font-size: 16px;
-    font-weight: 300 !important;
+    font-size: 18px;
     margin-top: 5px;
   }
   
-  .grantz {
+  .grant {
     margin-top: 30px;
     display: flex;
     align-items: center;
   }
   
-  .gtxtz {
+  .gtxt {
     margin-left: 15px;
     font-size: 20px;
   }
   
   
-  .revokez {
+  .revoke {
     margin-top: 30px;
     display: flex;
     align-items: center;
   }
   
   /*Block2 designs....*/
-  .block1z {
+  .block1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     margin-top: 60px;
     border-radius: 5px 5px 0 0;
     background: white;
   }
   
-  .head-textz {
+  .head-text {
     padding-top: 20px;
     margin-left: 20px;
     display: flex;
   }
   
-  .title-datez {
+  .title-date {
     margin-top: 5px;
     margin-left: 15px;
     background: #E3F2FD;
@@ -80,22 +72,21 @@
     width: 100%;
     /*border: solid black 1px;*/
     margin-top: 20px;
-    /* border-collapse: collapse; */
-    /* border-spacing: 20px; */
-    padding: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
   }
   
   th {
     border-bottom: 1px solid #EAECF0;
     text-align: left;
-    padding-left: 50px;
+    /*padding-left: 20px;*/
     height: 30px; 
     color: #667085;
     background: #F9FAFB;
   }
   
   .header {
-    padding-left: 50px;
+    padding-left: 20px;
     width: 5%;
   }
   
@@ -115,7 +106,6 @@
   td {
     border-bottom: 1px solid #EAECF0;
     height: 50px;
-    padding-left: 50px;
   }
   
   .check2 {
@@ -123,7 +113,7 @@
   }
   
   /*Pagination design.............*/
-  .paginationz {
+  .pagination {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 0 0 5px 5px;
     display: flex;
@@ -134,14 +124,14 @@
     border: 0px solid #EAECF0;
   }
   
-  .previousz {
+  .previous {
     margin-left: 20px;
     width: 20%;
     display: flex;
     align-items: center;
   }
   
-  .previousz button {
+  .previous button {
     width: 100px;
     height: 30px;
     background: white;
@@ -157,21 +147,21 @@
     margin-left: 10px;
   }
   
-  .numbersz {
+  .numbers {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .btn-contz {
+  .btn-cont {
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
-  .numbersz button {
+  .numbers button {
     width: 30px;
     height: 30px;
     background: white;
@@ -182,13 +172,13 @@
     justify-content: center;
   }
   
-  .numbersz > .btn-cont >.no1 {
+  .numbers > .btn-cont >.no1 {
     background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
   }
   
-  .nextz {
+  .next {
     margin-right: 20px;
     width: 20%;
     display: flex;
@@ -196,7 +186,7 @@
     justify-content: right;
   }
   
-  .nextz button {
+  .next button {
     width: 100px;
     height: 30px;
     background: white;

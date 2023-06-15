@@ -6,7 +6,8 @@
 }
 
 .main{
-  overflow-y: scroll;
+  margin-left: 300px;
+    overflow-y: scroll;
     background-color: #ededed;
     height: 100vh;
     width: 100%;
@@ -21,7 +22,7 @@
 
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 30px !important;
 }
 
 
@@ -267,7 +268,7 @@
 .history-container{
   width: 100%;
   height: fit-content;
-  padding: 24px 40px;
+  padding: 24px 30px !important;
   border-radius: 10px;
   background: #fff;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
@@ -276,14 +277,18 @@
   box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px !important;
+}
+.light-text{
+  font-size: 14px;
+  font-weight: 300;
 }
 .h-container{
   border-radius: 10px;
   background: #fff;
   font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
   display: flex;
-  gap: 20px;
+  gap: 15px !important;
   align-items: center;
 }
 .history{

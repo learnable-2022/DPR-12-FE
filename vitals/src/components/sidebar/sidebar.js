@@ -50,30 +50,35 @@ export default function Sidebar() {
 
   
   return (
-    <div className='sidebar'>
-      <Link to="/" ><img src={logo} alt='logo' /> </Link>
+    <div className='patient-main-sidebar'>
 
-      <div className='side-container'>    
-            <form  className='searchbar'>
-                <input type="text" placeholder='Search' />
-                {/* <button type='submit'>Search</button> */}
-            </form>
-      </div> 
+    
+      <div className='the-sidebar'>
 
-      <Links />
-      
-      <div className='details-container'>
-        <div className='details'>
-            <img src={usericon} alt="profile" />
-            <div>
-                <p className='name'>{userDetails.data.firstName + " " || "Seyi"}{userDetails.data.lastName}</p>
-                <p className='email'>{userDetails.data.email || "seyi@gmail.com"}</p>
-            </div>
-            <button onClick={Logout} ><LogoutOutlinedIcon /></button>
-        </div>
+        <Link to="/" ><img src={logo} alt='logo' /> </Link>
+
+        <div className='side-container'>    
+              <form  className='searchbar'>
+                  <input type="text" placeholder='Search' />
+                  {/* <button type='submit'>Search</button> */}
+              </form>
+        </div> 
+
+        <Links />      
       </div>
 
-      
+
+      <div className='details-container'>
+          <div className='details'>
+              <img src={usericon} alt="profile" />
+              <div>
+                  <p className='name'>{userDetails.data.firstName + " " || "Seyi"}{userDetails.data.lastName}</p>
+                  <p className='email'>{userDetails.data.email || "seyi@gmail.com"}</p>
+              </div>
+              <button onClick={Logout} ><LogoutOutlinedIcon /></button>
+          </div>
+      </div>
+
     </div>
   )
 }
