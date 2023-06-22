@@ -7,7 +7,7 @@ import './doctorspages.css'
 
 export default function UpdateRecord() {
   return (
-    <div>
+    <div className='update-update'>
         <div className='update-container'>
                 <Sidebar />
                 <div className='main-update-container'>

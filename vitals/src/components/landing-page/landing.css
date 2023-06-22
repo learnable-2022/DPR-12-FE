@@ -2502,7 +2502,12 @@ font-weight: 300;
 }
 @media only screen and (min-width: 420px) and (max-width: 599px){
 
-
+    .landing-container{
+        position: relative;
+        width: 100% !important;
+        height: fit-content;
+        background: linear-gradient(258.96deg, #FFFFFF 0%, rgba(217, 255, 255, 0.6) 100%);
+    }
     .navbar{
         /* background-color: #FFCC80; */
         display: flex;
@@ -3092,7 +3097,7 @@ font-weight: 300;
         background-color: #FFCC80;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-between !important;
         padding: 10px 25px;
         width: 100%;
         z-index: -1;
@@ -3183,7 +3188,7 @@ font-weight: 300;
         font-size: large;
         /* width: 100px; */
         float: right;
-        margin-left: -120px;
+        margin-left: -50px;
         margin-top: -20px;
     }
     .menu-icon{
@@ -3196,14 +3201,14 @@ font-weight: 300;
         width: 100%;
         position: relative;
         height: fit-content;
-        padding: 25px 15px;
+        padding: 25px 25px !important;
     }
 
     .hero-details{
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center !important;
         justify-content: center;
         gap: 40px;
     }
@@ -3213,17 +3218,17 @@ font-weight: 300;
         display: flex;
         gap: 25px;
         flex-direction: column;
-        /* width: auto; */
+        width: 100% !important;
     }
     .hero-text h1{
-        font-size: 22px;
+        font-size: 25px;
         color: #1E88E5;
-        max-width: 150px;
-        line-height: 28px;
+        max-width: 200px;
+        line-height: 30px;
     }
     .hero-text p{
         line-height: 20px;
-        width: 150px;
+        width: 200px;
         color: #121212;
         font-size: 14px;
         font-weight: 300;
@@ -3253,16 +3258,11 @@ font-weight: 300;
         margin: auto;
         position: relative;
     }
-    .hero-fade{
-        width: 250px;
-        position: relative;
-        z-index: -5;
-        margin-top: -700px;
-        
-    }
+    
     .hero-doctor{
         position: relative;
-        width: 200px;
+        width: 100%;
+        margin-left: 20px;
     }
 
 
@@ -3272,7 +3272,7 @@ font-weight: 300;
 width: 100%;
 position: relative;
 background-color: #1E88E5;
-padding: 45px 15px;
+padding: 45px 15px !important;
 }
 
 .who-container{
@@ -3311,7 +3311,7 @@ padding: 0 0px;
 display: flex;
 flex-direction: column;
 margin: auto;
-gap: 30px;
+gap: 30px !important;
 justify-content: center ;
 }
 
@@ -3550,7 +3550,7 @@ input[type = "radio"]{
 .footer{
 background-color: #121212;
 color: #fff;
-padding: 75px 15px;
+padding: 75px 15px !important;
 display: flex;
 flex-direction: column;
 gap: 150px;

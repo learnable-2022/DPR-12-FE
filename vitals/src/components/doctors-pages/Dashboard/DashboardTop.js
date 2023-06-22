@@ -4,9 +4,9 @@ import esuth from '../../../images/esuth.svg'
 
 export default function DashboardTop() {
   return (
-    <div>
+    <div className='acccesss'>
       <div className='access-top'>
-            <div className='text-side'>
+            <div className='text-sided'>
                 <img src={esuth} alt='' />
                 <p>Enugu State University Teaching Hospital (Parklane)</p>
             </div>
@@ -14,7 +14,7 @@ export default function DashboardTop() {
                 <p>Logged in as: <span>Dr. Jonathan Ani</span></p>
                 <img src={ani} alt='' />
             </div>
-        </div>
+      </div>
     </div>
   )
 }

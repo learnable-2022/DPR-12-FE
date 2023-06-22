@@ -19,23 +19,21 @@ import '../doctorspages.css'
 
 export default function MainRecords() {
   return (
-    <div>
+    <div className='the-dashboard'>
 
       <div className='main-access'>
-      <RecordTop />
-      <div className='main-access-vitals'>
+        <RecordTop />
+        <div className='main-access-vitals'>
+          <Vitals />
+        </div>
+        <Table />
+        <div className='record-main'>
+          <RecordBLeft />
+          <RecordBRight />
+        </div>
 
-        <Vitals />
-      </div>
-      <Table />
-      <div className='record-main'>
-        <RecordBLeft />
-        <RecordBRight />
-      </div>
-
-      <Link to={'/updaterecords'}><button className='add-btn' style={{right:'0'}}>UPDATE</button></Link>
-
-    </div>  
+        <Link to={'/updaterecords'}><button className='add-btn' style={{right:'0'}}>UPDATE</button></Link>
+      </div>  
       
     </div>
   )

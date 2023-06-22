@@ -1,0 +1,509 @@
+{
+    "abi": [
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "patientAddress",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string[6]",
+                    "name": "diseaseInfo",
+                    "type": "string[6]"
+                }
+            ],
+            "name": "DiseaseInformationUpdated",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "patientAddress",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string[2]",
+                    "name": "labResults",
+                    "type": "string[2]"
+                }
+            ],
+            "name": "LabResultsUpdated",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "patientAddress",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string[2]",
+                    "name": "labTests",
+                    "type": "string[2]"
+                }
+            ],
+            "name": "LabTestsUpdated",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "patientAddress",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string[3]",
+                    "name": "medicationInfo",
+                    "type": "string[3]"
+                }
+            ],
+            "name": "MedicationInformationUpdated",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "previousOwner",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "newOwner",
+                    "type": "address"
+                }
+            ],
+            "name": "OwnershipTransferred",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "bytes32",
+                    "name": "role",
+                    "type": "bytes32"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "bytes32",
+                    "name": "previousAdminRole",
+                    "type": "bytes32"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "bytes32",
+                    "name": "newAdminRole",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "RoleAdminChanged",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "bytes32",
+                    "name": "role",
+                    "type": "bytes32"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "sender",
+                    "type": "address"
+                }
+            ],
+            "name": "RoleGranted",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "bytes32",
+                    "name": "role",
+                    "type": "bytes32"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                },
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "sender",
+                    "type": "address"
+                }
+            ],
+            "name": "RoleRevoked",
+            "type": "event"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "patientAddress",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string[7]",
+                    "name": "vitalSigns",
+                    "type": "string[7]"
+                }
+            ],
+            "name": "VitalSignsUpdated",
+            "type": "event"
+        },
+        {
+            "inputs": [],
+            "name": "DEFAULT_ADMIN_ROLE",
+            "outputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "patientAddress",
+                    "type": "address"
+                }
+            ],
+            "name": "getPatientRecords",
+            "outputs": [
+                {
+                    "components": [
+                        {
+                            "internalType": "string[6]",
+                            "name": "diseaseInfo",
+                            "type": "string[6]"
+                        },
+                        {
+                            "internalType": "string[7]",
+                            "name": "vitalSigns",
+                            "type": "string[7]"
+                        },
+                        {
+                            "internalType": "string[3]",
+                            "name": "medicationInfo",
+                            "type": "string[3]"
+                        },
+                        {
+                            "internalType": "string[2]",
+                            "name": "labTests",
+                            "type": "string[2]"
+                        },
+                        {
+                            "internalType": "string[2]",
+                            "name": "labResults",
+                            "type": "string[2]"
+                        }
+                    ],
+                    "internalType": "struct PatientRecord.Records",
+                    "name": "",
+                    "type": "tuple"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "role",
+                    "type": "bytes32"
+                }
+            ],
+            "name": "getRoleAdmin",
+            "outputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "role",
+                    "type": "bytes32"
+                },
+                {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                }
+            ],
+            "name": "grantRole",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "role",
+                    "type": "bytes32"
+                },
+                {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                }
+            ],
+            "name": "hasRole",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "onlyDoctor",
+            "outputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "",
+                    "type": "bytes32"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "owner",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "renounceOwnership",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "role",
+                    "type": "bytes32"
+                },
+                {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                }
+            ],
+            "name": "renounceRole",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes32",
+                    "name": "role",
+                    "type": "bytes32"
+                },
+                {
+                    "internalType": "address",
+                    "name": "account",
+                    "type": "address"
+                }
+            ],
+            "name": "revokeRole",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "bytes4",
+                    "name": "interfaceId",
+                    "type": "bytes4"
+                }
+            ],
+            "name": "supportsInterface",
+            "outputs": [
+                {
+                    "internalType": "bool",
+                    "name": "",
+                    "type": "bool"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "newOwner",
+                    "type": "address"
+                }
+            ],
+            "name": "transferOwnership",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "patientAddress",
+                    "type": "address"
+                },
+                {
+                    "internalType": "string[6]",
+                    "name": "_diseaseInfo",
+                    "type": "string[6]"
+                }
+            ],
+            "name": "updateDiseaseInfo",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "patientAddress",
+                    "type": "address"
+                },
+                {
+                    "internalType": "string[2]",
+                    "name": "_labResults",
+                    "type": "string[2]"
+                }
+            ],
+            "name": "updateLabResults",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "patientAddress",
+                    "type": "address"
+                },
+                {
+                    "internalType": "string[2]",
+                    "name": "_labTests",
+                    "type": "string[2]"
+                }
+            ],
+            "name": "updateLabTests",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "patientAddress",
+                    "type": "address"
+                },
+                {
+                    "internalType": "string[3]",
+                    "name": "_medicationInfo",
+                    "type": "string[3]"
+                }
+            ],
+            "name": "updateMedicationInfo",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "patientAddress",
+                    "type": "address"
+                },
+                {
+                    "internalType": "string[7]",
+                    "name": "_vitalSigns",
+                    "type": "string[7]"
+                }
+            ],
+            "name": "updateVitalSigns",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ]
+}

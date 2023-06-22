@@ -7,12 +7,10 @@ export default function MainDashboard() {
   return (
     <div>
         
-        <div className='main-access'>
+        <div className='dashboard-stack'>
             <DashboardTop />
             <DashboardMid />
-            <DashboardBottom />
-
-            
+            <DashboardBottom />   
         </div>
 
     </div>

@@ -1,0 +1,33 @@
+const patientsData = [
+    {
+        id: 1,
+        name: "John Doe",
+        dateOfBirth: "1990-05-15",
+        walletAddress: "",
+        gender: "Male",
+        address: "123 Main St, City, State, ZIP",
+        phone: "123-456-7890",
+        email: "john.doe@example.com",
+        bio: "",
+        height: "",
+        weight: "",
+        bloodGroup: "",
+        genotype: "",
+        profileImg: "",
+        bloodPressure: "",
+        oxygenLevel: "",
+        heartRate: "",
+        bloodSugar: "",
+        respiratoryRate: "",
+        diseaseName: "Lisinopril",
+        diseaseDetails: "10 mg",
+        signsAndSymptoms: "",
+        medicationName: "Lisinopril",
+        dosage: "10 mg",
+        labTest: "",
+        labResults: ""        
+      }
+  ];
+  
+  export default patientsData;
+  

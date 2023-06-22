@@ -8,15 +8,15 @@ import { UserContext } from '../UserContext';
 
 const ProfilePage = () => {
 
-    const { user } = useContext(UserContext);
+    // const { user } = useContext(UserContext);
 
-    const { firstName, lastName, email } = user;
+    // const { firstName, lastName, email } = user;
 
-    const name = firstName + ' ' + lastName;
+    // const name = firstName + ' ' + lastName;
     
 
-//   const [name, setName] = useState('');
-//   const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [picture, setPicture] = useState(null);
   const [isEditMode, setIsEditMode] = useState(false);
   const [editableFields, setEditableFields] = useState({
