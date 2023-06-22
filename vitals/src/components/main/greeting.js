@@ -60,12 +60,12 @@ export default function Greeting({userDetails}) {
   return (
     <div className='greeting-container'>
       <div className='greeting'>
-        <h3>Welcome {userDetails.data.firstName} <span>&#128075;&#127996;</span></h3>
+        <h3>Welcome {userDetails.data.firstName}  <span>&#128075;&#127996;</span></h3>
         <p>Track & control your medical records from this dashboard.</p>
         <br />
           <div>
-              <p className='wallet-text'>Wallet Address: <span className='wallet-txt'>{walletAddress}</span></p>
-              <p className='green'>{message}</p>
+              <p className='wallet-text green'>Wallet Address: <span className='wallet-txt'>{walletAddress}</span></p>
+              <p className='green wallet-text'>{message}</p>
               <p className='error-text'>{errorMessage}</p>
             </div>
       </div>

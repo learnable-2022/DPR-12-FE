@@ -1684,16 +1684,33 @@
 .update-container{
     /* position: absolute; */
     display: flex;
-    /* overflow-y: scroll; */
+    align-items: flex-start;
     width: 100%;
 }
 .main-update-container{
     width: 100%;
 }
+.main-updates-container{
+    width: 100%;
+}
+.main-updates{
+    /* overflow-y: scroll; */
+    /* background-color: #fafafa; */
+    height: 100vh;
+    width: 100%;
+    /* max-width: 1150px; */
+    padding: 0 44px;
+    margin-top: -30px;
+    font-family: 'Lato', 'Helvetica Neue',;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
 
 .main-update{
     /* overflow-y: scroll; */
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     height: 100vh;
     width: 100%;
     /* max-width: 1150px; */

@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-import './doctorspages.css'; // Import CSS file for styling
+import '../doctorspages.css'; // Import CSS file for styling
 import { Navigate, useNavigate } from 'react-router-dom';
 
-const MultiStepForm = () => {
+const NewMultiForm = () => {
+
+  const docToken = localStorage.getItem('doctor');
 
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const [formData, setFormData] = useState({
-    patientID: "",
+    patient_id: "",
     patientWalletAddress: "",
     doctorsID: "",
     bloodPressure: "",
@@ -50,15 +52,109 @@ const MultiStepForm = () => {
     navigate('/patients');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
+  
+    try {
+      const response = await fetch('https://vitals-8myt.onrender.com/vitals/doctors/hcps/64878d5317fe4084f0d80049/healthRecord/create', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${docToken}`,
+          'Content-Type': 'application/json',
+          // Add any additional headers required by your backend
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      if (!response.ok) {
+        throw new Error('Error posting form data to the backend');
+      }
+  
+      // Optionally, you can handle the response from the backend if needed
+      const responseData = await response.json();
+      console.log(responseData);
+  
+      // Optionally, you can navigate to another page after the form submission
+      navigate('/patients');
+    } catch (error) {
+      console.error(error);
+      // Handle any error that occurred during the form submission
+    }
   };
+  
 
   const renderForm = () => {
     switch (currentPage) {
       case 1:
+        return (
+          <div className='diseases-container'>
+      
+            <div className='disease-1'>
+              <label>Patient's ID</label>
+              <input
+                type="text"
+                name="patient_id"
+                value={formData.patient_id}
+                onChange={handleInputChange}
+                placeholder="e.g 1234567890"
+              />
+            </div>
+            <div className='disease-1'>
+              <label>Patient's Wallet Address</label>
+              <input
+                type="text"
+                name="patientWalletAddress"
+                value={formData.patientWalletAddress}
+                onChange={handleInputChange}
+                placeholder="000xx.....................................aa"
+              />
+            </div>
+            <div className='disease-1'>
+              <label>Disease</label>
+              <input
+                type="text"
+                name="disease"
+                value={formData.disease}
+                onChange={handleInputChange}
+                placeholder="e.g Malaria"
+              />
+            </div>
+            <div className='disease-2'>
+              <label>Disease Details</label>
+              <textarea
+                type="text"
+                name="diseaseDetails"
+                value={formData.diseaseDetails}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className='disease-2'>
+              <label>Signs and Symptoms</label>
+              <textarea
+                type="text"
+                name="signsAndSymptoms"
+                value={formData.signsAndSymptoms}
+                onChange={handleInputChange}
+              />
+            </div>
+            <div className='disease-1'>
+              <label>Doctor's ID </label>
+              <input
+                type="text"
+                name="doctorsID"
+                value={formData.doctorsID}
+                onChange={handleInputChange}
+                placeholder="e.g 1234567890"
+              />
+            </div>
+            <div className='vitalsigns-btn'>
+              <button className='van-btn' onClick={prevPage}>PREV</button>
+              <button className='nav-btn' onClick={nextPage}>NEXT</button>
+            </div>
+          </div>
+            );
+        
+      case 2:
         return (
           <div className='vitalsigns-container'>
             <div className='vitalsigns'>
@@ -130,78 +226,10 @@ const MultiStepForm = () => {
             </div>
             <br />
             <div className='vitalsigns-btn'>
-              <button className='van-btn' onClick={handleCancel}>CANCEL</button>
+              <button className='van-btn' onClick={prevPage}>PREV</button>
               <button className='nav-btn' onClick={nextPage}>NEXT</button>
             </div>
           </div>
-        );
-      case 2:
-        return (
-      <div className='diseases-container'>
-        <div className='disease-1'>
-          <label>Disease</label>
-          <input
-            type="text"
-            name="disease"
-            value={formData.disease}
-            onChange={handleInputChange}
-            placeholder="e.g Malaria"
-          />
-        </div>
-        <div className='disease-2'>
-          <label>Disease Details</label>
-          <textarea
-            type="text"
-            name="diseaseDetails"
-            value={formData.diseaseDetails}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className='disease-2'>
-          <label>Signs and Symptoms</label>
-          <textarea
-            type="text"
-            name="signsAndSymptoms"
-            value={formData.signsAndSymptoms}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div className='disease-1'>
-              <label>Doctor's ID </label>
-              <input
-                type="text"
-                name="doctorsID"
-                value={formData.doctorsID}
-                onChange={handleInputChange}
-                placeholder="e.g 1234567890"
-              />
-            </div>
-
-        <div className='disease-1'>
-          <label>Patient's Wallet Address</label>
-          <input
-            type="text"
-            name="patientWalletAddress"
-            value={formData.patientWalletAddress}
-            onChange={handleInputChange}
-            placeholder="000xx.....................................aa"
-          />
-        </div>
-        <div className='disease-1'>
-          <label>Patient's ID</label>
-          <input
-            type="text"
-            name="patientID"
-            value={formData.patientID}
-            onChange={handleInputChange}
-            placeholder="e.g 1234567890"
-          />
-        </div>
-        <div className='vitalsigns-btn'>
-        <button className='van-btn' onClick={prevPage}>PREV</button>
-          <button className='nav-btn' onClick={nextPage}>NEXT</button>
-        </div>
-      </div>
         );
       case 3:
         return (
@@ -227,7 +255,7 @@ const MultiStepForm = () => {
             />
           </div>
           <div className='vitalsigns-btn'>
-            <button className='van-btn' onClick={prevPage}>PREV</button>
+          <button className='van-btn' onClick={prevPage}>PREV</button>
             <button className='nav-btn' onClick={nextPage}>NEXT</button>
           </div>
       </div>
@@ -280,8 +308,8 @@ const MultiStepForm = () => {
       <form onSubmit={handleSubmit}>
         <div className="form-container">
           <div className="step-indicator">
-            <div className={`step ${currentPage === 1 ? 'akctive' : ''}`} onClick={() => navigateToStep(1)}>Vital Signs</div>
-            <div className={`step ${currentPage === 2 ? 'akctive' : ''}`} onClick={() => navigateToStep(2)}>Disease Information</div>
+            <div className={`step ${currentPage === 1 ? 'akctive' : ''}`} onClick={() => navigateToStep(1)}>Patient Information</div>
+            <div className={`step ${currentPage === 2 ? 'akctive' : ''}`} onClick={() => navigateToStep(2)}>Vital Signs</div>
             <div className={`step ${currentPage === 3 ? 'akctive' : ''}`} onClick={() => navigateToStep(3)}>Prescription</div>
             <div className={`step ${currentPage === 4 ? 'akctive' : ''}`} onClick={() => navigateToStep(4)}>Lab Test</div>
             <div className={`step ${currentPage === 5 ? 'akctive' : ''}`} onClick={() => navigateToStep(5)}>Lab Result</div>
@@ -293,4 +321,4 @@ const MultiStepForm = () => {
   );
 };
 
-export default MultiStepForm;
+export default NewMultiForm;

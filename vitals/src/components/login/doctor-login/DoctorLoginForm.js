@@ -74,7 +74,7 @@ const DoctorLoginForm = () => {
         console.log(docData.message);
         console.log("Success");
         setMessage('Login Successful')
-        // localStorage.setItem("user-info", JSON.stringify(data));
+        localStorage.setItem("doctor", (docData.token));
         // let token = localStorage.getItem("user-info");
         navigate("/doctordashboard")
 

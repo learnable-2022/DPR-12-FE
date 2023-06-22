@@ -6,7 +6,7 @@ import GasMeterOutlinedIcon from '@mui/icons-material/GasMeterOutlined';
 import DeviceThermostatOutlinedIcon from '@mui/icons-material/DeviceThermostatOutlined';
 import BlurOnOutlinedIcon from '@mui/icons-material/BlurOnOutlined';
 
-export default function vitals() {
+export default function vitals({healthRecord}) {
   return (
     <div className='vitals-container'> 
         <div className='vitals'>
@@ -19,7 +19,7 @@ export default function vitals() {
                     <BloodtypeOutlinedIcon />
                 </div>
                 <div className='description'>
-                <p className='weight'>N/A</p>
+                <p className='weight'>{healthRecord ? healthRecord.HealthRecords[0].bloodPressure : "N/A"}</p>
                 <small>Blood pressure</small>
                 </div>
             </div>
@@ -28,7 +28,7 @@ export default function vitals() {
                     <MonitorHeartOutlinedIcon />
                 </div>
                 <div className='description'>
-                <p className='weight'>N/A</p>
+                <p className='weight'>{healthRecord ? healthRecord.HealthRecords[0].heartRate : "N/A"}</p>
                 <small>Heart Rate</small>
                 </div>
             </div>
@@ -37,7 +37,7 @@ export default function vitals() {
                     <GasMeterOutlinedIcon />
                 </div>
                 <div className='description'>
-                <p className='weight'>N/A</p>
+                <p className='weight'>{healthRecord ? healthRecord.HealthRecords[0].bloodSugar : "N/A"}</p>
                 <small>Blood Sugar</small>
                 </div>
             </div>
@@ -46,7 +46,7 @@ export default function vitals() {
                     <DeviceThermostatOutlinedIcon />
                 </div>
                 <div className='description'>
-                <p className='weight'>N/A</p>
+                <p className='weight'>{healthRecord ? healthRecord.HealthRecords[0].temperature : "N/A"}</p>
                 <small>Temperature</small>
                 </div>
             </div>
@@ -55,7 +55,7 @@ export default function vitals() {
                     <BlurOnOutlinedIcon />
                 </div>
                 <div className='description'>
-                <p className='weight'>N/A</p>
+                <p className='weight'>{healthRecord ? healthRecord.HealthRecords[0].oxygenLevel : "N/A"}</p>
                 <small>Oxygen</small>
                 </div>
             </div>

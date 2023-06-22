@@ -20,6 +20,7 @@ import UpdateRecord from './components/doctors-pages/UpdateRecord';
 import AccessControl from './components/judon/Access/Access'
 import Notifications from './components/patient-pages/Notifications/Notifications';
 import ProfilePage from './components/patient-pages/Profile/Profile';
+import NewRecord from './components/doctors-pages/NewRecord/NewRecord';
 import { UserProvider } from './components/patient-pages/UserContext';
 
 
@@ -59,6 +60,7 @@ function App() {
           <Route path='/patients' element={<AccessPatientRecords />} />
           <Route path='/patientrecords' element={<Records />} />
           <Route path='/updaterecords' element={<UpdateRecord />} />
+          <Route path='/newrecord' element={<NewRecord />} />
           {/* <Route path='/doctorappointments' element={<Appointment />} /> */}
           </Routes>
 
