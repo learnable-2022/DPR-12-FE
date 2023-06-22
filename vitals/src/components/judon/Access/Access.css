@@ -3,59 +3,67 @@
     margin: 0;
   }
   
-  .container {
+  .containerz {
     background: #f7f7f7;
     font-family: "Lato", sans-serif;
+    display: flex;
   }
   
-  .body {
+  .bodyz {
     font-family: "Lato", sans-serif;
+    margin-left: 300px;
+    padding: 40px;
   
   }
   
-  .title {
+  .titlez {
+    font-size: 25px;
+  }
+  .title-sidez h3{
+    font-weight: 400;
     font-size: 25px;
   }
   
-  .subtitle {
+  .subtitlez {
     color: #6B7280;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 300 !important;
     margin-top: 5px;
   }
   
-  .grant {
+  .grantz {
     margin-top: 30px;
     display: flex;
     align-items: center;
   }
   
-  .gtxt {
+  .gtxtz {
     margin-left: 15px;
     font-size: 20px;
   }
   
   
-  .revoke {
+  .revokez {
     margin-top: 30px;
     display: flex;
     align-items: center;
   }
   
   /*Block2 designs....*/
-  .block1 {
+  .block1z {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     margin-top: 60px;
     border-radius: 5px 5px 0 0;
     background: white;
   }
   
-  .head-text {
+  .head-textz {
     padding-top: 20px;
     margin-left: 20px;
     display: flex;
   }
   
-  .title-date {
+  .title-datez {
     margin-top: 5px;
     margin-left: 15px;
     background: #E3F2FD;
@@ -72,21 +80,22 @@
     width: 100%;
     /*border: solid black 1px;*/
     margin-top: 20px;
-    border-collapse: collapse;
-    border-spacing: 0;
+    /* border-collapse: collapse; */
+    /* border-spacing: 20px; */
+    padding: 20px;
   }
   
   th {
     border-bottom: 1px solid #EAECF0;
     text-align: left;
-    /*padding-left: 20px;*/
+    padding-left: 50px;
     height: 30px; 
     color: #667085;
     background: #F9FAFB;
   }
   
   .header {
-    padding-left: 20px;
+    padding-left: 50px;
     width: 5%;
   }
   
@@ -106,6 +115,7 @@
   td {
     border-bottom: 1px solid #EAECF0;
     height: 50px;
+    padding-left: 50px;
   }
   
   .check2 {
@@ -113,7 +123,7 @@
   }
   
   /*Pagination design.............*/
-  .pagination {
+  .paginationz {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 0 0 5px 5px;
     display: flex;
@@ -124,14 +134,14 @@
     border: 0px solid #EAECF0;
   }
   
-  .previous {
+  .previousz {
     margin-left: 20px;
     width: 20%;
     display: flex;
     align-items: center;
   }
   
-  .previous button {
+  .previousz button {
     width: 100px;
     height: 30px;
     background: white;
@@ -147,21 +157,21 @@
     margin-left: 10px;
   }
   
-  .numbers {
+  .numbersz {
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   
-  .btn-cont {
+  .btn-contz {
     width: 70%;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
-  .numbers button {
+  .numbersz button {
     width: 30px;
     height: 30px;
     background: white;
@@ -172,13 +182,13 @@
     justify-content: center;
   }
   
-  .numbers > .btn-cont >.no1 {
+  .numbersz > .btn-cont >.no1 {
     background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
   }
   
-  .next {
+  .nextz {
     margin-right: 20px;
     width: 20%;
     display: flex;
@@ -186,7 +196,7 @@
     justify-content: right;
   }
   
-  .next button {
+  .nextz button {
     width: 100px;
     height: 30px;
     background: white;

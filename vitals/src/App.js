@@ -17,9 +17,10 @@ import DrDashboard from './components/doctors-pages/Dashboard/Dashboard';
 import Appointments from './components/patient-pages/Appointments/Appointments';
 import Records from './components/doctors-pages/Records/Records';
 import UpdateRecord from './components/doctors-pages/UpdateRecord';
-// import Update from './components/judon/UpdateRecords/Update'
 import AccessControl from './components/judon/Access/Access'
-// import Appointment from './components/judon/Appointments/Appointments'
+import Notifications from './components/patient-pages/Notifications/Notifications';
+import ProfilePage from './components/patient-pages/Profile/Profile';
+import { UserProvider } from './components/patient-pages/UserContext';
 
 
 
@@ -28,6 +29,7 @@ function App() {
   return (
     <>    
       <div>
+        <UserProvider>
 
 {/* -------------PATIENT'S ROUTES ----------------------- */}
 
@@ -42,6 +44,8 @@ function App() {
           <Route path='/patient-login' element={<PatientLogin />} />
           <Route path='/patient-register' element={<PatientRegister />} />
           <Route path='/accesscontrol' element={<AccessControl />} />
+          <Route path='/notifications' element={<Notifications />} />
+          <Route path='/profile' element={<ProfilePage />} />
           
         </Routes>
 
@@ -67,6 +71,8 @@ function App() {
 
           </Routes>
 
+          
+        </UserProvider>
       </div>
     </>
   );

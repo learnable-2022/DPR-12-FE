@@ -11,10 +11,10 @@ export default function AccessTop() {
 
 
   return (
-    <div>
+    <div className='acccesss'>
         <div className='access-top'>
             <div className='search-side'>
-                <input type="text" className="large-inputs" placeholder='Search patient by name...' onChange={handleChange} />
+                <input type="text" placeholder='Search patient by name...' onChange={handleChange} />
             </div>
             <div className='profile-side'>
                 <p>Logged in as: <span>Dr. Jonathan Ani</span></p>

@@ -1,17 +1,18 @@
 import React from 'react'
 import Patient from './Patient'
 import AccessTop from './AccessTop'
+import '../doctorspages.css'
 
 export default function MainAccess(props) {
 
   
   return (
-    <div>
+    <div className='the-dashboard'>
         
-        <div className='main-access'>
+        <div className='main-accesss'>
             <AccessTop />
 
-             <p className='access-directory'>Dashboard - Patient Profile</p> 
+            <p className='access-directory'>Dashboard - Patient Profile</p> 
 
             <div className='main-access-patient'>
 
@@ -23,8 +24,7 @@ export default function MainAccess(props) {
               <Patient image="ifeanyi.svg" name="Ifeanyi Okafor" age={26} gender="Male" /> 
               <Patient image="christian.svg" name="Christian Ndukwe" age={21} gender="Male" /> 
   
-            </div>
-            
+            </div>            
         </div>
         
       

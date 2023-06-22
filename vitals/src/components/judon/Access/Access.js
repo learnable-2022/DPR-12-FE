@@ -13,66 +13,66 @@ export default function App() {
 
 
 
-    <div className="container">
+    <div className="containerz">
       <Sidebar />
 
-      <div className="body">
+      <div className="bodyz">
         
-        <div className="title-side">
+        <div className="title-sidez">
           <h3>Access Controls</h3>
         </div>
         
-        <div className="subtitle">
-          <h4>Manage who can view your medical records</h4>
+        <div className="subtitlez">
+          <p>Manage who can view your medical records</p>
         </div>
 
-        <div className="grant">
+        <div className="grantz">
           <img src={image1} />
 
-          <div className="gtxt">
+          <div className="gtxtz">
             <h4>Grant Access</h4>
           </div>
         </div>
 
-        <div className="revoke">
+        <div className="revokez">
           <img src={image} />
 
-          <div className="gtxt">
+          <div className="gtxtz">
             <h4>Revoke Access</h4>
           </div>
         </div>
         
         
 
-        <div className="block1">
+        <div className="block1z">
 
-          <div className="head-text">
+          <div className="head-textz">
 
-            <div className="title2">
+            <div className="title2z">
               <h3>Access Control history</h3>
             </div>
 
-            <div className="title-date">
+            <div className="title-datez">
               <h4>last 30days</h4>
             </div>
             
           </div>
 
-          <div className="table">
+          <div className="tablez">
             <AccessTable />
           </div>  
         
         </div>
 
-        <div className="pagination">
+        <div className="paginationz">
             
-            <div className="previous">
+            <div className="previousz">
               <PrevButton  />
             </div>
 
-            <div className="numbers">
-              <div className="btn-cont">
-                            <button className="no1">1</button>
+            <div className="numbersz">
+              <div className="btn-contz">
+                <button className="no1z">1</button>
                 <button>2</button>
                 <button>3</button>
                 <button>...</button>
@@ -83,7 +83,7 @@ export default function App() {
 
             </div>
 
-            <div className="next">
+            <div className="nextz">
               <NextButton  />
             </div>
           

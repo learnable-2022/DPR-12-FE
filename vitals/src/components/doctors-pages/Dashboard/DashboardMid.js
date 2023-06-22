@@ -57,7 +57,6 @@ export default function DashboardMid() {
             <div className='doc-details'>
                 <h4>Dr. Jonathan Ani. S </h4>
                 <span className='doc-status'> <span className='dot'>•</span> Resident Doctor</span>
-      
             </div>
             <div className='doc-info'>
                 <div>
@@ -82,14 +81,16 @@ export default function DashboardMid() {
               <p className='error-text'>{errorMessage}</p>
             </div>
         </div>
-      </div>
-      <div>
+
+        <div>
         <button
         className='nav-btn'
         onClick={requestAccount}
         
         >Connect Wallet</button>
       </div>
+      </div>
+      
     </div>
   )
 }

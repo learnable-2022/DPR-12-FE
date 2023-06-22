@@ -2,49 +2,112 @@
 
 
 /* ---------------------------------- access patient page ------------------------------------ */
-
+.the-dashboard{
+    width: 100% !important;
+    height: 100vh !important;
+    z-index: 100;
+    /* overflow-y: scroll; */
+    /* position: fixed; */
+    /* background-color: #1565C0 !important; */
+}
 
 .main-access{
     overflow-y: scroll;
-    background-color: #fafafa;
-    height: 100vh;
+    /* overflow-x: hidden; */
+    /* background-color: #000; */
+    height: 100vh !important;
     width: 100%;
-    max-width: 1150px;
+    /* max-width: 1150px; */
     padding: 24px 50px;
     font-family: 'Lato', 'Helvetica Neue',;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    position: absolute;
-    margin-left: 300px;
+    gap: 20px;
+    /* position: fixed !important; */
+    /* margin-left: 300px; */
+    /* flex-wrap: wrap; */   
+}
+.main-accesss{
+    overflow-y: scroll;
+    /* overflow-x: hidden; */
+    /* background-color: #000; */
+    height: 100vh !important;
+    width: 100%;
+    /* max-width: 1150px; */
+    padding: 24px 50px;
+    font-family: 'Lato', 'Helvetica Neue',;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* position: fixed !important; */
+    /* margin-left: 300px; */
+    /* flex-wrap: wrap; */   
+}
+.profile-detailss{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
+.main-access-patient{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100% !important;
+}
+
+.dashboard-stack{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    /* padding-bottom: 50px; */
+    margin-bottom: 50px;
 }
 .access-patients-main{
-    position: relative;
+    /* position: absolute; */
     display: flex;
     align-items: flex-start;
     width: 100%;
-    height: 100vh;
+    height: 100% !important;
+    z-index: 100;
+    /* background: #000; */
 }
 
-
-
+.main-access-vitals{
+    margin-top: 50px;
+}
 /* -----ACCESS TOP STYLING---------------------------------------------------------------- */
 
+
+.accccessss{
+    width: 100% !important;
+}
+.acccesss{
+    width: 100% !important;
+}
 
 .access-directory{
     font-size: 12px;
     font-weight: 300;
 }
 .access-top{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
     gap: 20px;
 }
-.search-side .large-inputs{
-    width: 600px !important;
+.search-side{
+    width: 100%;
+}
+.search-side input{
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 10px;
+    border: .5px solid #777777;
+    border-radius: 8px;
 }
 .search-side input::placeholder{
     font-weight: 300;
@@ -53,12 +116,18 @@
     outline: none !important;
 }
 
-.profile-side{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.profile-side p{
+    font-size: 16px !important;
 }
-
+.profile-side p span{
+    font-size: 16px !important;
+}
+.text-sided{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 
 
 /* ----------- PATIENTS STYLING   ------------------------- */
@@ -69,7 +138,7 @@
     align-items: center;
     gap: 20px;
 }
-.patient-profile-details .profile-details{
+.patient-profile-details .profile-detailss{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -77,14 +146,23 @@
 .avatar{
     width: 60px;
 }
+.profile.detailss{
+    width: 100%;
+}
+.profile-detailss h6{
+    font-weight: 400;
+}
+.profile-detailss p{
+    font-weight: 300;
+    font-size: 14px;
+}
 .patient-wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 0px;
-    padding-right: 50px;
 }
 .patient-btns{
+    margin-right: 100px;
     display: flex;
     gap: 10px;
 }
@@ -114,10 +192,829 @@
     border-radius: 10px;
     cursor: pointer;
 }
+.main-patient{
+    width: 100%;
+}
+.patient-wrap{
+    width: 100%;
+    /* height: 50px; */
+}
+.patient-wrapper{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
+
+/* -----------------------PATIENT`S MEDIA QUERY----------------------------------------- */
+
+
+@media screen and (min-width: 638px) and (max-width: 768px){
+   
+    .the-dashboard{
+        width: 100% !important;
+        height: 100vh !important;
+        z-index: 100;
+        /* overflow-wrap: normal; */
+        overflow-x: hidden;
+        padding: 0 24px;
+        /* background-color: #1565C0 !important; */
+    }
+    
+    .main-accesss{
+        overflow-y: scroll;
+        /* overflow-x: scroll; */
+        /* background-color: #000; */
+        height: 100vh !important;
+        width: 100% !important;
+        /* max-width: 1150px; */
+        padding: 24px 50px;
+        font-family: 'Lato', 'Helvetica Neue',;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* position: fixed !important; */
+        /* margin-left: 300px; */
+        /* flex-wrap: wrap; */   
+    }
+    .profile-detailss{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .main-access-patient{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .dashboard-stack{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        /* padding-bottom: 50px; */
+        margin-bottom: 50px;
+    }
+    .access-patients-main{
+        /* position: absolute; */
+        display: flex;
+        align-items: flex-start;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 100;
+        /* background: #000; */
+    }
+    
+    .main-access-vitals{
+        margin-top: 50px;
+    }
+   
+ /* -----ACCESS TOP STYLING---------------------------------------------------------------- */
+
+    .acccesss{
+        width: 100%;
+    }
+    .access-directory{
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .access-top{
+        /* position: relative; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+    .search-side{
+        width: 100%;
+    }
+    .search-side input{
+        width: 100%;
+        padding: 10px 10px;
+        border: .5px solid #777777;
+        border-radius: 8px;
+    }
+    .search-side input::placeholder{
+        font-weight: 300;
+    }
+    .search-side input:focus{
+        outline: none !important;
+    }
+
+    /* ----------- PATIENTS STYLING   ------------------------- */
+
+
+    .patient-profile-details{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .patient-profile-details .profile-detailss{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .profile.detailss{
+        width: 100%;
+    }
+    .profile-detailss h6{
+        font-size: 14px;
+        font-weight: 400;
+        flex-wrap: nowrap;
+    }
+    .profile-detailss p{
+        font-weight: 300;
+        font-size: 14px;
+        /* display: none; */
+    }
+    .avatar{
+        width: 50px;
+    }
+    .patient-wrapper{
+        display: flex;
+        align-items: center;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+    .patient-btns{
+        display: flex;
+        gap: 10px;
+        float: right;
+        align-items: flex-end;
+    }
+    .share-btn{
+        background-color: transparent;
+        border: 1px solid #1565C0;
+        outline: none;
+        color: #1565C0;
+        font-size: 12px;
+        font-weight: 300;
+        /* padding: 15px 20px; */
+        padding: auto 20px;
+        letter-spacing: .5px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all ease-in-out .5s;
+        text-decoration: none;
+        width: 100%;
+        float: right;
+        /* height: 50px; */
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .share-btn:hover{
+        background-color: #fff;
+        /* border: .5px solid #1565C0; */
+        outline: none;
+        color: #1565C0;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 15px 30px;
+        letter-spacing: .5px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 637px){
+   
+    .the-dashboard{
+        width: 100% !important;
+        height: 100vh !important;
+        z-index: 100;
+        /* overflow-wrap: normal; */
+        overflow-x: hidden;
+        padding: 0 24px;
+        /* background-color: #1565C0 !important; */
+    }
+    .main-accesss{
+        overflow-y: scroll;
+        /* overflow-x: scroll; */
+        /* background-color: #000; */
+        height: 100vh !important;
+        width: 100% !important;
+        /* max-width: 1150px; */
+        padding: 24px 50px;
+        font-family: 'Lato', 'Helvetica Neue',;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* position: fixed !important; */
+        /* margin-left: 300px; */
+        /* flex-wrap: wrap; */   
+    }
+    .profile-detailss{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .main-access-patient{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        /* margin-top: 100px; */
+        /* margin-left: -300px; */
+        /* position: absolute; */
+    }
+    
+    .dashboard-stack{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        /* padding-bottom: 50px; */
+        margin-bottom: 50px;
+    }
+    .access-patients-main{
+        /* position: absolute; */
+        display: flex;
+        align-items: flex-start;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 100;
+        /* background: #000; */
+    }
+    
+    .main-access-vitals{
+        margin-top: 50px;
+    }
+   
+ /* -----ACCESS TOP STYLING---------------------------------------------------------------- */
+
+    .acccesss{
+        width: 100%;
+    }
+    .access-directory{
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .access-top{
+        /* position: relative; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        flex-wrap: wrap-reverse;
+    }
+    .search-side{
+        width: 100%;
+    }
+    .search-side input{
+        width: 100%;
+        padding: 10px 10px;
+        border: .5px solid #777777;
+        border-radius: 8px;
+    }
+    .search-side input::placeholder{
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .search-side input:focus{
+        outline: none !important;
+    }
+    .profile-side{
+        width: 100%;
+    }
+    .profile-side p{
+        font-size: 16px !important;
+    }
+    .profile-side p span{
+        font-size: 16px !important;
+    }
+    .profile-side img{
+        width: 40px !important;
+    }
+
+    /* ----------- PATIENTS STYLING   ------------------------- */
+
+    .main-patient{
+        width: 100%;
+        /* border: .2px solid #1565C0; */
+        padding: 10px 25px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .patient-wrap{
+        width: 100%;
+        /* height: 50px; */
+    }
+    .patient-profile-details{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .patient-profile-details .profile-detailss{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .profile.detailss{
+        width: 100%;
+    }
+    .profile-detailss h6{
+        font-size: 14px;
+        font-weight: 400;
+        flex-wrap: nowrap;
+    }
+    .profile-detailss p{
+        font-weight: 300;
+        font-size: 14px;
+        /* display: none; */
+    }
+    .avatar{
+        width: 50px;
+    }
+    .patient-wrapper{
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: space-between;
+        /* gap: 25px; */
+        flex-wrap: wrap;
+    }
+    .patient-btns{
+        display: flex;
+        gap: 10px;
+        /* float: right; */
+        /* align-items: flex-end; */
+    }
+    .share-btn{
+        background-color: transparent;
+        border: 1px solid #2196F3;
+        outline: none;
+        color: #2196F3;
+        font-size: 12px;
+        font-weight: 300;
+        /* padding: 15px 20px; */
+        padding: 10px 10px;
+        letter-spacing: .5px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all ease-in-out .5s;
+        text-decoration: none;
+        width: 100%;
+        min-width: 100px;
+        height: 100%;
+        max-height: 40px;
+        float: right;
+        /* height: 50px; */
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .share-btn:hover{
+        background-color: #fff;
+        /* border: .5px solid #1565C0; */
+        outline: none;
+        color: #2196F3;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 10px 10px;
+        letter-spacing: .5px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 499px){
+
+    
+    
+   
+    .the-dashboard{
+        width: 100% !important;
+        height: 100vh !important;
+        z-index: 100;
+        /* overflow-wrap: normal; */
+        overflow-x: hidden;
+        padding: 0 24px;
+        /* background-color: #1565C0 !important; */
+    }
+    
+    .main-accesss{
+        overflow-y: scroll;
+        /* overflow-x: hidden; */
+        /* background-color: #000; */
+        height: 100vh !important;
+        width: 100% !important;
+        /* max-width: 1150px; */
+        padding: 24px 50px;
+        font-family: 'Lato', 'Helvetica Neue',;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start !important;
+        position: relative !important;
+        /* margin-left: 300px; */
+        /* flex-wrap: wrap; */
+    }
+    .profile-detailss{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .main-access-patient{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 170px;
+        /* margin-left: -300px; */
+        position: absolute;
+    }
+    
+    .dashboard-stack{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        /* padding-bottom: 50px; */
+        margin-bottom: 50px;
+    }
+    .access-patients-main{
+        /* position: absolute; */
+        display: flex;
+        align-items: flex-start;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 100;
+        /* background: #000; */
+    }
+    
+    .main-access-vitals{
+        margin-top: 50px;
+    }
+   
+ /* -----ACCESS TOP STYLING---------------------------------------------------------------- */
+
+    .acccesss{
+        width: 100%;
+    }
+    .access-directory{
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .access-top{
+        /* position: relative; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        flex-wrap: wrap-reverse;
+    }
+    .search-side{
+        width: 100%;
+    }
+    .search-side input{
+        width: 100%;
+        padding: 10px 10px;
+        border: .5px solid #777777;
+        border-radius: 8px;
+    }
+    .search-side input::placeholder{
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .search-side input:focus{
+        outline: none !important;
+    }
+    .profile-side{
+        width: 100%;
+    }
+    .profile-side p{
+        font-size: 16px !important;
+    }
+    .profile-side p span{
+        font-size: 16px !important;
+    }
+    .profile-side img{
+        width: 40px !important;
+    }
+
+    /* ----------- PATIENTS STYLING   ------------------------- */
+
+    .main-patient{
+        width: 100%;
+        /* border: .2px solid #1565C0; */
+        padding: 10px 25px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .patient-wrap{
+        width: 100%;
+        /* height: 50px; */
+    }
+    .patient-profile-details{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .patient-profile-details .profile-detailss{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .profile.detailss{
+        width: 100%;
+    }
+    .profile-detailss h6{
+        font-size: 14px;
+        font-weight: 400;
+        flex-wrap: nowrap;
+    }
+    .profile-detailss p{
+        font-weight: 300;
+        font-size: 14px;
+        /* display: none; */
+    }
+    .avatar{
+        width: 50px;
+    }
+    .patient-wrapper{
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: space-between;
+        /* gap: 25px; */
+        flex-wrap: wrap;
+    }
+    .patient-btns{
+        display: flex;
+        gap: 10px;
+        /* float: right; */
+        /* align-items: flex-end; */
+    }
+    .share-btn{
+        background-color: transparent;
+        border: 1px solid #2196F3;
+        outline: none;
+        color: #2196F3;
+        font-size: 12px;
+        font-weight: 300;
+        /* padding: 15px 20px; */
+        padding: 10px 10px;
+        letter-spacing: .5px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all ease-in-out .5s;
+        text-decoration: none;
+        width: 100%;
+        float: right;
+        /* height: 50px; */
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .share-btn:hover{
+        background-color: #fff;
+        /* border: .5px solid #1565C0; */
+        outline: none;
+        color: #2196F3;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 15px 30px;
+        letter-spacing: .5px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 399px){
+   
+    .the-dashboard{
+        width: 100% !important;
+        height: 100vh !important;
+        z-index: 100;
+        /* overflow-wrap: normal; */
+        overflow-x: hidden;
+        padding: 0 24px;
+        /* background-color: #1565C0 !important; */
+    }
+    
+    .main-accesss{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        /* background-color: #000; */
+        height: 100vh !important;
+        width: 100% !important;
+        /* max-width: 1150px; */
+        padding: 24px 50px;
+        font-family: 'Lato', 'Helvetica Neue',;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start !important;
+        position: relative;
+        transform: translate(-5%);
+        z-index: -1 !important;
+        left: 0;
+        /* flex-wrap: wrap; */
+        margin-left: 0px;
+    }
+    .profile-detailss{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .main-access-patient{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 120px;
+        /* margin-left: -300px; */
+        position: absolute;
+        margin-left: -20px;
+    }
+    
+    .dashboard-stack{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        /* padding-bottom: 50px; */
+        margin-bottom: 50px;
+    }
+    .access-patients-main{
+        /* position: absolute; */
+        display: flex;
+        align-items: flex-start;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 100;
+        /* background: #000; */
+    }
+    
+    .main-access-vitals{
+        margin-top: 50px;
+    }
+   
+ /* -----ACCESS TOP STYLING---------------------------------------------------------------- */
+
+    .acccesss{
+        width: 100%;
+    }
+    .access-directory{
+        font-size: 12px;
+        font-weight: 300;
+        display: none;
+    }
+    .access-top{
+        /* position: relative; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        flex-wrap: wrap-reverse;
+    }
+    .search-side{
+        width: 100%;
+    }
+    .search-side input{
+        width: 100%;
+        padding: 5px 5px;
+        border: .5px solid #777777;
+        border-radius: 8px;
+    }
+    .search-side input::placeholder{
+        font-size: 10px;
+        font-weight: 300;
+    }
+    .search-side input:focus{
+        outline: none !important;
+    }
+    .profile-side{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .profile-side p{
+        font-size: 12px !important;
+    }
+    .profile-side p span{
+        font-size: 14px !important;
+    }
+    .profile-side img{
+        width: 40px !important;
+    }
+
+    /* ----------- PATIENTS STYLING   ------------------------- */
+
+    .main-patient{
+        width: 100%;
+        /* border: .2px solid #1565C0; */
+        padding: 10px 25px;
+        /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+    }
+    .patient-wrap{
+        width: 100%;
+        /* height: 50px; */
+    }
+    .patient-profile-details{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .patient-profile-details .profile-detailss{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .profile.detailss{
+        width: 100%;
+    }
+    .profile-detailss h6{
+        font-size: 12px;
+        font-weight: 400;
+        flex-wrap: nowrap;
+    }
+    .profile-detailss p{
+        font-weight: 300;
+        font-size: 12px;
+        /* display: none; */
+    }
+    .avatar{
+        width: 50px;
+    }
+    .patient-wrapper{
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: space-between;
+        /* gap: 25px; */
+        flex-wrap: wrap;
+    }
+    .patient-btns{
+        display: flex;
+        gap: 10px;
+        /* float: right; */
+        /* align-items: flex-end; */
+    }
+    .share-btn{
+        background-color: transparent;
+        border: 1px solid #2196F3;
+        outline: none;
+        color: #2196F3;
+        font-size: 12px;
+        font-weight: 300;
+        /* padding: 15px 20px; */
+        padding: 10px 10px;
+        letter-spacing: .5px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all ease-in-out .5s;
+        text-decoration: none;
+        width: 100%;
+        min-width: 150px;
+        float: right;
+        /* height: 50px; */
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .share-btn:hover{
+        background-color: #fff;
+        /* border: .5px solid #1565C0; */
+        outline: none;
+        color: #2196F3;
+        font-size: 12px;
+        font-weight: 300;
+        padding: 10px 10px;
+        letter-spacing: .5px;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+        min-width: 150px;
+    }
+}
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------------------ */
 
 
 /* ----------------------------------- dashboard page --------------------------------------- */
+
+
+/* ------------------------------------------------------------------------------------------------ */
 
 
 .text-side{
@@ -143,6 +1040,8 @@
     display: flex;
     align-items: center;
     gap: 40px;
+    width: 100%;
+    flex-wrap: wrap;
 }
 .doctor-details{
     display: flex;
@@ -222,6 +1121,485 @@
 .wallet-text span{
     margin-left: 10px;
 }
+.profile-side{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.profile-side p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.profile-side p span{
+    font-size: 16px;
+    font-weight: 400;
+}
+.profile-side img{
+    width: 40px !important;
+}
+
+
+
+/* ----------------------------------------------------------------------------- */
+
+@media screen and (min-width: 638px) and (max-width: 768px){
+
+    .main-access{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        /* background-color: #000; */
+        height: 100vh !important;
+        width: 100% !important;
+        /* max-width: 1150px; */
+        padding: 24px 40px;
+        font-family: 'Lato', 'Helvetica Neue',;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* position: fixed !important; */
+        /* margin-left: 300px; */
+        /* flex-wrap: wrap;    */
+    }
+    .text-side{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .text-side img{
+        width: 30px;
+    }
+    .text-side p{
+        font-size: 12px;
+    }
+    .profile-side{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .profile-side p{
+        font-size: 12px;
+    }
+    .profile-side p span{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .profile-side img{
+        width: 30px;
+    }
+    
+    .dash-mid-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        border-radius: 10px;
+        padding: 32px 20px;
+        height: fit-content;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #e7e7e7;
+        font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+        /* -webkit-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75); */
+    }
+    .dash-doc{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+    }
+    .doctor-details{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .doc-details{
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+       align-items: flex-start;
+    }
+    .doc-details h4{
+        width: 600px;
+        max-width: 600px;
+        font-size: 25px;
+        letter-spacing: .5px;
+    }
+    .doc-details label{
+        width: fit-content;
+    }
+    .doc-info{
+        display: flex;
+        flex-wrap: wrap ;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+    .doc-info >div{
+        width: 100%;
+    }
+    .doc-info label{
+        font-size: 12px;
+        font-weight: 300;
+        width: 100%;
+    }
+    .doc-info >div p{
+        font-weight: 400;
+        font-size: 14px;
+        width: 100%;
+        max-width: 200px;
+        flex-wrap: wrap;
+    }
+    
+    .doc-img{
+        width: 100px;
+    }
+    .doc-status{
+        background: #E3F2FD;
+        width: 150px;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: 300;
+        color: red;
+        border-radius: 8px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .dot{
+        color: red;
+        font-size: 18px;
+    }
+    
+    /* ------------ DASH - BOTTOM -------------------------------- */
+    
+    .dash-bottom-title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .dash-table{
+        color: red;
+    }
+    
+    .wallet-text{
+        font-size: 14px;
+    }
+    .wallet-txt{
+        font-size: 14px;
+        font-weight: 300;
+        color: green;
+    }
+    .wallet-text span{
+        margin-left: 10px;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 637px){
+
+    .text-side{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .text-side img{
+        width: 30px;
+    }
+    .text-side p{
+        font-size: 12px;
+    }
+    .profile-side{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .profile-side p{
+        font-size: 12px;
+    }
+    .profile-side p span{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .profile-side img{
+        width: 30px;
+    }
+    
+    .dash-mid-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        border-radius: 10px;
+        padding: 32px 20px;
+        height: fit-content;
+        width: 100%;
+        background: #fff;
+        border: 1px solid #e7e7e7;
+        font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+        /* -webkit-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 28px -22px rgba(0,0,0,0.75); */
+    }
+    .dash-doc{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+    }
+    .doctor-details{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .doc-details{
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+       align-items: flex-start;
+    }
+    .doc-details h4{
+        width: 600px;
+        max-width: 600px;
+        font-size: 25px;
+        letter-spacing: .5px;
+    }
+    .doc-details label{
+        width: fit-content;
+    }
+    .doc-info{
+        display: flex;
+        flex-wrap: wrap ;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+    .doc-info >div{
+        width: 100%;
+    }
+    .doc-info label{
+        font-size: 12px;
+        font-weight: 300;
+        width: 100%;
+    }
+    .doc-info >div p{
+        font-weight: 400;
+        font-size: 14px;
+        width: 100%;
+        max-width: 200px;
+        flex-wrap: wrap;
+    }
+    
+    .doc-img{
+        width: 100px;
+    }
+    .doc-status{
+        background: #E3F2FD;
+        width: 150px;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: 300;
+        color: red;
+        border-radius: 8px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .dot{
+        color: red;
+        font-size: 18px;
+    }
+    
+    /* ------------ DASH - BOTTOM -------------------------------- */
+    
+    .dash-bottom-title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .dash-table{
+        color: red;
+    }
+    
+    .wallet-text{
+        font-size: 14px;
+    }
+    .wallet-txt{
+        font-size: 14px;
+        font-weight: 300;
+        color: green;
+    }
+    .wallet-text span{
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 499px){
+
+    .main-access{
+        overflow-y: scroll;
+        overflow-x: hidden;
+        /* background-color: #000; */
+        height: 100vh !important;
+        width: 100% !important;
+        /* max-width: 1150px; */
+        padding: 24px 50px;
+        font-family: 'Lato', 'Helvetica Neue',;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* position: fixed !important; */
+        /* margin-left: 300px; */
+        /* flex-wrap: wrap; */   
+    }
+    .text-side{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .text-side img{
+        width: 30px;
+    }
+    .text-side p{
+        font-size: 12px;
+    }
+    .profile-side{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .profile-side p{
+        font-size: 12px;
+    }
+    .profile-side p span{
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .profile-side img{
+        width: 30px;
+    }
+    
+    .dash-mid-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        border-radius: 10px;
+        padding: 32px 20px;
+        height: fit-content;
+        background: #fff;
+        border: 1px solid #e7e7e7;
+        font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+    }
+    .dash-doc{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+        width: 100%;
+    }
+    .doctor-details{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .doc-details{
+       display: flex;
+       flex-direction: column;
+       gap: 10px;
+       align-items: flex-start;
+    }
+    .doc-details h4{
+        width: 600px;
+        max-width: 600px;
+        font-size: 25px;
+        letter-spacing: .5px;
+    }
+    .doc-details label{
+        width: fit-content;
+    }
+    .doc-info{
+        display: flex;
+        flex-wrap: wrap ;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+    .doc-info >div{
+        width: 100%;
+    }
+    .doc-info label{
+        font-size: 12px;
+        font-weight: 300;
+        width: 100%;
+    }
+    .doc-info >div p{
+        font-weight: 400;
+        font-size: 14px;
+        width: 100%;
+        max-width: 200px;
+        flex-wrap: wrap;
+    }
+    
+    .doc-img{
+        width: 100px;
+    }
+    .doc-status{
+        background: #E3F2FD;
+        width: 150px;
+        padding: 5px 10px;
+        font-size: 12px;
+        font-weight: 300;
+        color: red;
+        border-radius: 8px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+    .dot{
+        color: red;
+        font-size: 18px;
+    }
+    
+    /* ------------ DASH - BOTTOM -------------------------------- */
+    
+    .dash-bottom-title{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .dash-table{
+        color: red;
+    }
+    
+    .wallet-text{
+        font-size: 14px;
+    }
+    .wallet-txt{
+        font-size: 14px;
+        font-weight: 300;
+        color: green;
+    }
+    .wallet-text span{
+        margin-left: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -271,23 +1649,23 @@
     border: 0;
     outline: none;
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 300;
-    padding: 15px 30px;
+    padding: 15px 40px;
     letter-spacing: .5px;
     border-radius: 10px;
     cursor: pointer;
     transition: all ease-in-out .5s;
     text-decoration: none;
     max-width: 200px;
-    right: 100%;
+    align-self: flex-end;
 }
 .add-btn:hover{
     background-color: #fff;
     border: .5px solid #1565C0;
     outline: none;
     color: #1565C0;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
     padding: 15px 30px;
     letter-spacing: .5px;
@@ -299,31 +1677,32 @@
 
 
 /* ------------UPDATE RECORD -------------------------------- */
-
+.update-update{
+    width: 100%;
+}
 
 .update-container{
     /* position: absolute; */
     display: flex;
     /* overflow-y: scroll; */
+    width: 100%;
 }
 .main-update-container{
-    margin-left: 300px;
-    display: flex;
-    overflow-y: scroll;
+    width: 100%;
 }
 
 .main-update{
     /* overflow-y: scroll; */
     background-color: #fafafa;
     height: 100vh;
-    width: 79%;
+    width: 100%;
     /* max-width: 1150px; */
-    padding: 24px 50px;
+    padding: 44px 44px;
     font-family: 'Lato', 'Helvetica Neue',;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    position: absolute;
+    position: relative;
 }
 
 
@@ -349,7 +1728,7 @@
     border-radius: 2px;
   }
   
-  .step.active {
+  .step.akctive {
     
     border-bottom: 5px solid #1565C0;
     border-radius: 2px;
@@ -491,3 +1870,7 @@
 .disease-2 textarea:focus{
     outline: 0;
 }
+
+
+
+

@@ -4,17 +4,17 @@ import MaterialTable from 'material-table'
 export default function Table() {
 
     const data = [
-        {filename: "Tuberculosis type II", hmo:"FMC Jabi", physician:"Dr. Miriam Jenna", last:"May 23rd,2023"},
-        {filename: "Malaria & Typhoid", hmo:"FMC Jabi", physician:"Dr. Chizube Ejere", last:"May 23rd,2023"},
-        {filename: "Measles Stage II", hmo:"FMC Jabi", physician:"Dr. Tappi", last:"May 23rd,2023"},
-        {filename: "Malaria & Typhoid", hmo:"FMC Jabi", physician:"Dr. Yemisi", last:"May 23rd,2023"},
-        {filename: "Measles Stage I", hmo:"FMC Jabi", physician:"Dr. Ikenna Roberts", last:"May 23rd,2023"},
-        {filename: "Measles Stage I", hmo:"FMC Jabi", physician:"Dr. Kemi Wilkinson", last:"May 23rd,2023"},
-        {filename: "Axphysiation and Blocked Thorax", hmo:"FMC Jabi", physician:"Dr. Bolu Ajah", last:"May 23rd,2023"}
+        {diagnosis: "Tuberculosis type II", hmo:"ROA Hospital", physician:"Dr. Miriam Jenna", last:"May 23rd,2023"},
+        {diagnosis: "Malaria & Typhoid", hmo:"UNTH, Enugu", physician:"Dr. Chizube Ejere", last:"May 23rd,2023"},
+        {diagnosis: "Measles Stage II", hmo:"Medvac Inc.", physician:"Dr. Tappi", last:"May 23rd,2023"},
+        {diagnosis: "Malaria & Typhoid", hmo:"ROA Hospital", physician:"Dr. Yemisi", last:"May 23rd,2023"},
+        {diagnosis: "Measles Stage I", hmo:"FMC Jabi", physician:"Dr. Ikenna Roberts", last:"May 23rd,2023"},
+        {diagnosis: "Measles Stage I", hmo:"FMC Jabi", physician:"Dr. Kemi Wilkinson", last:"May 23rd,2023"},
+        {diagnosis: "Axphysiation and Blocked Thorax", hmo:"UITH, Ibadan", physician:"Dr. Bolu Ajah", last:"May 23rd,2023"}
     ]
     const columns = [
         {
-            title:'File name',field:'filename',cellStyle:{fontSize:"14px", fontWeight:"400", padding:"25px"},Style:{fontSize:"14px", fontWeight:"400", padding:"25px"}
+            title:'Diagnosis',field:'diagnosis',cellStyle:{fontSize:"14px", fontWeight:"400", padding:"25px"},Style:{fontSize:"14px", fontWeight:"400", padding:"25px"}
         },
         {
             title:'HMO',field:'hmo',cellStyle:{fontSize:"14px", fontWeight:"300"}
@@ -23,7 +23,7 @@ export default function Table() {
             title:'Physician',field:'physician',cellStyle:{fontSize:"14px", fontWeight:"300"}
         },
         {
-            title:'Last Appointment',field:'last',cellStyle:{fontSize:"14px", fontWeight:"300"}
+            title:'Last Update',field:'last',cellStyle:{fontSize:"14px", fontWeight:"300"}
         }
     ]
 

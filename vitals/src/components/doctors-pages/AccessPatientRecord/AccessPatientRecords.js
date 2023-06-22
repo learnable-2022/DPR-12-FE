@@ -8,8 +8,8 @@ export default function AccessPatientRecords() {
   return (
     <div>
         <div className='access-patients-main'>
-        <Sidebar />
-        <MainAccess />
+          <Sidebar />
+          <MainAccess />
         </div>
         
         
