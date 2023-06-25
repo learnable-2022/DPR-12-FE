@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import ani from '../../../images/dr.ani.svg'
 
-export default function AccessTop() {
+export default function AccessTop({docDetails}) {
 
     const [searchText, setSearchText] = useState("");
 
@@ -12,12 +12,13 @@ export default function AccessTop() {
 
   return (
     <div className='acccesss'>
-        <div className='access-top'>
+        <div className='access-topp'>
+            <h4>Patients</h4>
             <div className='search-side'>
                 <input type="text" placeholder='Search patient by name...' onChange={handleChange} />
             </div>
             <div className='profile-side'>
-                <p>Logged in as: <span>Dr. Jonathan Ani</span></p>
+                <p>Logged in as: <span>Dr. {docDetails.data.firstName} {docDetails.data.lastName}</span></p>
                 <img src={ani} alt='' />
             </div>
         </div>

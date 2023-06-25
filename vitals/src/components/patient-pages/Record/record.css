@@ -1,0 +1,267 @@
+
+
+.person-record{
+    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 24px 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* flex-wrap: wrap-reverse; */
+}
+.full-width{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.record-side-1{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.record-header{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.record-header h4{
+    font-size: 30px;
+    font-weight: 400;
+}
+.record-header p{
+    font-weight: 300;
+    font-size: 16px;
+    color: #777777;
+}
+.record-side-2{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    width: 100%;
+    max-width: 320px;
+    min-width: 250px;
+    height: 95vh;
+    max-height: 95vh;
+    float: right;
+    border-radius: 12px;
+    padding: 20px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 10px;
+    /* background: rgb(255, 191, 96); */
+    /* background: linear-gradient(263deg, rgba(255,219,166,1) 0%, rgba(255,208,140,1) 100%, rgba(255,183,77,1) 100%); */
+    background-image: linear-gradient(to right, #1976d2, #2c80d7, #3b8adc, #4994e1, #579ee5);
+    /* position: fixed;
+    right: 2%; */
+    /* justify-content: center; */
+}
+.record-2-img{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.record-2-details{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #fff;
+    
+}
+.record-2-details h4{
+    font-size: 30px;
+    font-weight: 400;
+}
+.record-2-details p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.record-2-details span{
+    font-weight: 300;
+}
+.record-2-bio{
+    text-align: left;
+    padding: 15px;
+    color: #fefefe;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.record-2-bio h4{
+    font-size: 16px;
+    font-weight: 400;
+}
+.record-2-bio p{
+    font-size: 14px;
+    font-weight: 300;
+}
+.bio-container{
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid #1976D2;
+    padding: 10px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.record-more-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+    border: 1px solid #1976D2;
+    padding: 20px 30px;
+    color: #fefefe;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+}
+.record-2-more-details{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.record-inside{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.record-inside p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.record-inside span{
+    font-size: 14px;
+    font-weight: 300;
+}
+.record-vitals{
+    width: 100%;
+}
+.glass-btn{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+color: #fff;
+padding: 10px 20px;
+}
+
+.vitals-container{
+    /* margin-top: -20px; */
+    width: 100%;
+    /* max-width: 720px; */
+    height: fit-content;
+    padding: 40px 40px;
+    border-radius: 10px;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #1976d2, #2c80d7, #3b8adc, #4994e1, #579ee5);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial;
+}
+.vitals{
+    width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.vitals h3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+}
+.icon-container {
+    width: 56px;
+    height: 56px;
+    padding: 4px 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 28px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 28px -14px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 28px -14px rgba(0,0,0,0.75);
+}
+.sign-container{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+}
+.new-btn{
+    background-color: #1976D2 !important;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 15px 30px !important;
+    letter-spacing: .5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+    text-decoration: none;
+}
+.new-btn:hover{
+    background-color: #fff !important;
+    border: .5px solid #1976D2;
+    outline: none;
+    color: #1976D2;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 15px 30px !important;
+    letter-spacing: .5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+    text-decoration: none;
+}
+
+.sign{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.descriptionn{
+    /* width: 60px; */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.descriptionn p{
+    color: #fff;
+    font-size: 14px;
+}
+.descriptionn small {
+    font-size: 14px;
+    font-weight: 300;
+    color: #fefefe !important;
+}

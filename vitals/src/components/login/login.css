@@ -2,7 +2,10 @@
 
 
 
-
+.login-body{
+    width: 100%;
+    height: 100vh;
+}
 .top-bar{
     height: fit-content;
     width: 100%;
@@ -14,15 +17,24 @@
     width: 120px;
 }
 
+.login-imgs{
+    /* border: 2px solid #1976D2; */
+    width: 270px !important;
+}
+
 
 /* --------------BODY STYLING----------------------- */
 
 
+.body-body{
+    width: 100%;
+}
 .body-container{
+    width: 100%;
     padding: 55px 125px;
     display: flex;
     flex-direction: column;
-    gap: 70px;
+    gap: 40px;
     align-items: center;
 }
 
@@ -34,10 +46,11 @@
 }
 .body-text h3{
     font-size: 30px;
+    font-weight: 400;
 }
 .body-text p{
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
 }
 .body-box-container{
     display: flex;
@@ -46,14 +59,16 @@
 .body-box{
     height: fit-content;
     width: fit-content;
-    padding: 60px 40px;
+    padding: 40px 20px !important;
     border-radius: 10px;
     background-color: #E3F2FD;
     display: flex;
     flex-direction: column;
+    justify-content: space-between !important;
     align-items: center;
-    gap: 40px;
+    /* gap: 40px; */
     transition: all ease-in-out .5s;
+    box-shadow: rgba(29, 24, 5, 0.234) 0px 2px 5px;
 }
 .body-box:hover{
     background-color: #ffcc80;
@@ -81,7 +96,7 @@
 
 }
 .login:hover{
-    text-decoration: underline solid #121212 10%;
+    /* text-decoration: underline solid #121212 10%; */
     color: #121212;
     font-weight: 300;
     cursor: pointer;

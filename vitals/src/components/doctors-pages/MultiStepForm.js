@@ -7,12 +7,24 @@ const MultiStepForm = () => {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    address: '',
-    phoneNumber: ''
+    patientID: "",
+    patientWalletAddress: "",
+    doctorsID: "",
+    bloodPressure: "",
+    oxygenLevel: "",
+    heartRate: "",
+    bloodSugar: "",
+    respiratoryRate: "",
+    diseaseName: "",
+    diseaseDetails: "",
+    signsAndSymptoms: "",
+    medicationName: "",
+    dosage: "",
+    labTest: "",
+    labResults: "" 
   });
+
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -155,25 +167,16 @@ const MultiStepForm = () => {
           />
         </div>
         <div className='disease-1'>
-          <label>Doctor's Name</label>
-          <input
-            type="text"
-            name="doctorsName"
-            value={formData.doctorsName}
-            onChange={handleInputChange}
-            placeholder="e.g Jermaine Jenkins"
-          />
-        </div>
-        <div className='disease-1'>
-          <label>Doctor's Wallet Address</label>
-          <input
-            type="text"
-            name="doctorsWalletAddress"
-            value={formData.doctorsWalletAddress}
-            onChange={handleInputChange}
-            placeholder="000xx.....................................aa"
-          />
-        </div>
+              <label>Doctor's ID </label>
+              <input
+                type="text"
+                name="doctorsID"
+                value={formData.doctorsID}
+                onChange={handleInputChange}
+                placeholder="e.g 1234567890"
+              />
+            </div>
+
         <div className='disease-1'>
           <label>Patient's Wallet Address</label>
           <input
@@ -182,6 +185,16 @@ const MultiStepForm = () => {
             value={formData.patientWalletAddress}
             onChange={handleInputChange}
             placeholder="000xx.....................................aa"
+          />
+        </div>
+        <div className='disease-1'>
+          <label>Patient's ID</label>
+          <input
+            type="text"
+            name="patientID"
+            value={formData.patientID}
+            onChange={handleInputChange}
+            placeholder="e.g 1234567890"
           />
         </div>
         <div className='vitalsigns-btn'>
@@ -214,7 +227,7 @@ const MultiStepForm = () => {
             />
           </div>
           <div className='vitalsigns-btn'>
-          <button className='van-btn' onClick={prevPage}>PREV</button>
+            <button className='van-btn' onClick={prevPage}>PREV</button>
             <button className='nav-btn' onClick={nextPage}>NEXT</button>
           </div>
       </div>
@@ -247,7 +260,7 @@ const MultiStepForm = () => {
             <textarea
               type="text"
               name="labResult"
-              value={formData.labResult}
+              value={formData.labResults}
               onChange={handleInputChange}
             />
           </div>

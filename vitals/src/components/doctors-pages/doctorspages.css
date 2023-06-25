@@ -55,6 +55,16 @@
     gap: 30px;
     width: 100% !important;
 }
+.main-access-patientt{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    gap: 30px;
+    width: 100% !important;
+}
 
 .dashboard-stack{
     width: 100% !important;
@@ -74,10 +84,173 @@
     z-index: 100;
     /* background: #000; */
 }
+.dash-mid-button{
+    /* width: 100%; */
+    float: right;
+    right: 0%;
+}
+
+.dash-dash-doc{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.wallet-btn{
+    width: 200px;
+    background-color: #1976D2;
+    border: 0;
+    outline: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 15px 30px;
+    letter-spacing: .5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+    text-decoration: none;
+}
+.wallet-btn:hover{
+    background-color: #fff;
+    border: .5px solid #1565C0;
+    outline: none;
+    color: #1565C0;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 15px 30px;
+    letter-spacing: .5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 
 .main-access-vitals{
     margin-top: 50px;
 }
+
+
+/* --------------------------DASH-BOTTOM-------------------------------------- */
+
+.create-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.create-record{
+    width: 300px;
+    max-width: 500px;
+    min-width: 200px;
+    height: 400px;
+    max-height: 400px;
+    min-height: 250px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 50px 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #1976d2, #2c80d7, #3b8adc, #4994e1, #579ee5);
+} 
+.create-record:hover{
+    cursor: pointer;
+    width: 300px;
+    max-width: 500px;
+    min-width: 200px;
+    height: 400px;
+    max-height: 400px;
+    min-height: 250px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 50px 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #1976d2, #2c80d7, #3b8adc, #4994e1, #579ee5);
+} 
+.new-record-icon{
+    font-size: 220px !important;
+    text-align: center;
+    display: flex;
+    align-self: center;
+}   
+.new-record-text{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.new-record-text p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.totale{
+    width: 300px;
+    max-width: 500px;
+    min-width: 200px;
+    height: 400px;
+    max-height: 400px;
+    min-height: 250px;
+    color: #1976d2;
+    background-color: #fefefe;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    padding: 50px 20px;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    /* background-image: linear-gradient(to right, #1976d2, #2c80d7, #3b8adc, #4994e1, #579ee5); */
+}
+.totale:hover{
+    cursor: pointer;
+    width: 300px;
+    max-width: 500px;
+    min-width: 200px;
+    height: 400px;
+    max-height: 400px;
+    min-height: 250px;
+    color: #fff;
+    background-color: #FFB74D;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between !important;
+    padding: 50px 20px;
+    border-radius: 10px;
+    /* background-image: linear-gradient(to right, #1976d2, #2c80d7, #3b8adc, #4994e1, #579ee5); */
+}
+
+.new-record-text-2{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.new-record-text-2 p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.new-rec{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.new-rec h4{
+    font-size: 40px;
+}
+
 /* -----ACCESS TOP STYLING---------------------------------------------------------------- */
 
 
@@ -99,12 +272,23 @@
     align-items: center !important;
     gap: 20px;
 }
-.search-side{
+.access-topp{
     width: 100%;
+    display: flex !important;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 20px;
 }
+.access-topp h4{
+    font-size: 30px;
+    font-weight: 400;
+}
+
 .search-side input{
-    width: 100%;
+    width: 400px;
     max-width: 400px;
+    min-width: 200px;
     padding: 10px 10px;
     border: .5px solid #777777;
     border-radius: 8px;
@@ -120,13 +304,20 @@
     font-size: 16px !important;
 }
 .profile-side p span{
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 .text-sided{
     width: 100%;
     display: flex;
     gap: 10px;
     align-items: center;
+}
+.text-sided-img{
+    width: 30px;
+}
+.text-sided p{
+    font-size: 14px;
+    font-weight: 300;
 }
 
 
@@ -1038,10 +1229,10 @@
 }
 .dash-doc{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 40px;
     width: 100%;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .doctor-details{
     display: flex;
@@ -1684,16 +1875,33 @@
 .update-container{
     /* position: absolute; */
     display: flex;
-    /* overflow-y: scroll; */
+    align-items: flex-start;
     width: 100%;
 }
 .main-update-container{
     width: 100%;
 }
+.main-updates-container{
+    width: 100%;
+}
+.main-updates{
+    /* overflow-y: scroll; */
+    /* background-color: #fafafa; */
+    height: 100vh;
+    width: 100%;
+    /* max-width: 1150px; */
+    padding: 0 44px;
+    margin-top: -30px;
+    font-family: 'Lato', 'Helvetica Neue',;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
 
 .main-update{
     /* overflow-y: scroll; */
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     height: 100vh;
     width: 100%;
     /* max-width: 1150px; */
@@ -1874,3 +2082,54 @@
 
 
 
+
+
+
+
+/* Add this CSS to your main-records.css file or any other appropriate CSS file */
+
+.drug {
+    /* Your existing styles for the drug div */
+    position: relative;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .drug.undo {
+    transform: translateX(-100%);
+  }
+  
+  .undo-container {
+    position: absolute;
+    top: 0;
+    right: -120px; /* Adjust the value based on your design */
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f1; /* Adjust the background color as desired */
+    padding: 8px 12px; /* Adjust the padding as desired */
+    border-radius: 4px; /* Adjust the border radius as desired */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow if desired */
+    z-index: 1;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .drug.undo .undo-container {
+    transform: translateX(100%);
+  }
+  
+  .undo-text {
+    margin-right: 8px; /* Adjust the margin as desired */
+    color: #333; /* Adjust the text color as desired */
+    font-size: 14px; /* Adjust the font size as desired */
+  }
+  
+  .undo-button {
+    background-color: transparent; /* Adjust the button background color as desired */
+    border: none;
+    color: #333; /* Adjust the button text color as desired */
+    font-size: 14px; /* Adjust the button font size as desired */
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* Add any additional styles as needed */
+  

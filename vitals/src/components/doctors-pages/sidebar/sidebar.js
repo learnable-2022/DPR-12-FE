@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 
 import {Link, NavLink} from 'react-router-dom'
 
-import Links from './links.js'
+
 import logo from '../../../images/VitalsLogo.svg'
 import ani from '../../../images/dr.ani.svg'
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
@@ -23,6 +23,12 @@ export default function Sidebar() {
  
   const [show, setShow] = useState(false);
   // const [isActive, setIsActive] = useState(false);
+
+  const handleLogout = () => {
+    // const token = window.localStorage.getItem('user')
+    window.localStorage.removeItem('doctor');
+    window.location.href = '/doctor-login';
+  }
 
   return (
     <div>
@@ -57,22 +63,18 @@ export default function Sidebar() {
                       <span className='nav-logo-name'>Patients</span>
                     </NavLink>
                     <NavLink to='/appointments' className='nav-link'>
-                      <CalendarMonthOutlinedIcon className='nav-link-icon' />
-                      <span className='nav-logo-name'>Appointment</span>
-                    </NavLink>
-                    <NavLink to='/appointments' className='nav-link'>
                       <GroupOutlinedIcon className='nav-link-icon' />
-                      <span className='nav-logo-name'>Users</span>
+                      <span className='nav-logo-name'>Profile</span>
                     </NavLink>
                   </div>
                 </div>
 
                 <div className='details-container'>
                   <div>
-                    <NavLink to={'/doctor-login'} className='nav-link'>
+                    <Link onClick={handleLogout} className='nav-link'>
                       <LogoutOutlinedIcon className='nav-link-icon' />
                       <span className='nav-logo-name'>Logout</span>
-                    </NavLink>
+                    </Link>
                     
                   </div>
                 </div>
