@@ -2,7 +2,7 @@ import React from 'react'
 import ani from '../../../images/dr.ani.svg'
 import '../doctorspages.css'
 
-export default function RecordTop(props) {
+export default function RecordTop( {docDetails}) {
 
 
   return (
@@ -10,10 +10,10 @@ export default function RecordTop(props) {
         <div className='access-top'>
             <div className='title-side'>
                 <h4>Records</h4>
-                <p>You are Viewing {props.name}’s Health Record</p>
+                <p>You are Viewing {}’s Health Record</p>
             </div>
             <div className='profile-side'>
-                <p>Logged in as: <span>Dr. Jonathan Ani</span></p>
+                <p>Logged in as: <span>Dr. {docDetails.data.firstName + " " + docDetails?.data?.lastName}</span></p>
                 <img src={ani} alt='' />
             </div>
         </div>

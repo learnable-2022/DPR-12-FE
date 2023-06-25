@@ -6,9 +6,12 @@ import './Dashboard.css'
 
 export default function Dashboard() {
   return (
-    <div className='dashboard'>
+    <div className='dashboard-dashboard'>
+      <div className='dashboard'>
       <Sidebar />
       <Main />
     </div>
+    </div>
+    
   )
 }

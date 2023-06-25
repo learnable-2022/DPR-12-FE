@@ -1,10 +1,13 @@
 
 
-
+.dashboard-dashboard{
+    width: 100%;
+}
 .dashboard{
     display: flex;
     align-items: center;
     height: 100vh;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
+    width: 100%;
     
 }

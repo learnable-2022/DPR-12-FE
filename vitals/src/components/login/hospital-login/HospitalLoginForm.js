@@ -74,11 +74,10 @@ const HospitalLoginForm = () => {
 
       if (data.token) {
         // Authentication successful, customize user experience
-        console.log(data.message);
-        console.log("Success");
+        console.log(data);
         setMessage('Login Successful')
-        localStorage.setItem("user-info", JSON.stringify(data));
-        navigate("/hospitaldashboard")
+        localStorage.setItem("hcp-token", JSON.stringify(data.token));
+        navigate("/hcp-dashboard")
 
       } else {
         setError('User does not exist');
@@ -107,7 +106,9 @@ const HospitalLoginForm = () => {
                                 onChange={(e) => setRegistrationNo(e.target.value)}
                             /> 
                                  
-                            <EmailOutlinedIcon/></div>
+                            <EmailOutlinedIcon/>
+                            
+                        </div>
                     </div>
                     
                     <div className='right-input'>
@@ -129,7 +130,7 @@ const HospitalLoginForm = () => {
 
                     </div>
 
-                    <button type='submit' >LOGIN</button>
+                    <button onClick={signIn} type='submit' >LOGIN</button>
                     
                 </form>
         </div>

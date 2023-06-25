@@ -1,40 +1,62 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useNavigate } from 'react-router-dom'
-import RecordTop from './RecordTop'
-import Table from './Table'
-import RecordBLeft from './RecordBLeft'
-import RecordBRight from './RecordBRight'
-import Vitals from '../../main/vitals'
-import '../doctorspages.css'
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import RecordTop from './RecordTop';
+import Table from './Table';
+import RecordBLeft from './RecordBLeft';
+import RecordBRight from './RecordBRight';
+import Vitals from './vitals';
+import '../doctorspages.css';
 
+export default function MainRecords({ docDetails }) {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const patient_id = searchParams.get('patient_id');
+  const doctorId = docDetails.data._id;
+  const token = localStorage.getItem('doctor');
+  const [patientRecords, setPatientRecords] = useState([]);
 
-// const navigate = useNavigate();
+  useEffect(() => {
+    
+    fetchPatientRecords();
+  }, [doctorId, patient_id]);
 
+  const fetchPatientRecords = async () => {
+    try {
+      const response = await fetch(
+        `https://vitals-8myt.onrender.com/vitals/doctors/hcps/6496dbca3286be350e7fdd34/healthRecord/patients/${patient_id}/healthRecord`,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
-// const handleNavigate = () => {
-//   navigate('/updaterecord')
-// }
+      if (!response.ok) {
+        throw new Error('Error fetching patient records');
+      }
 
+      const data = await response.json();
+      console.log(data);
+      setPatientRecords(data);
+    } catch (error) {
+      console.log('Error fetching patient records:', error);
+    }
+  };
 
-export default function MainRecords() {
   return (
     <div className='the-dashboard'>
-
       <div className='main-access'>
-        <RecordTop />
+        <RecordTop docDetails={docDetails} />
         <div className='main-access-vitals'>
-          <Vitals />
+          <Vitals patientRecords={patientRecords} />
         </div>
-        <Table />
+        <Table patientRecords={patientRecords} />
         <div className='record-main'>
-          <RecordBLeft />
-          <RecordBRight />
+          <RecordBLeft patientRecords={patientRecords} />
+          <RecordBRight patientRecords={patientRecords} />
         </div>
-
-        <Link to={'/updaterecords'}><button className='add-btn' style={{right:'0'}}>UPDATE</button></Link>
-      </div>  
-      
+      </div>
     </div>
-  )
+  );
 }

@@ -1,167 +1,118 @@
-import React, {useEffect, useState, useContext} from 'react'
+import React, { useEffect, useState, useContext } from 'react';
 import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 import { UserContext } from '../../patient-pages/UserContext';
+import SignUpFormSuccess from '../SignupFormSuccess';
 
+const PatientRegForm = () => {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirm_password, setConfirm_Password] = useState('');
+  const [error, setError] = useState('');
+  const [message, setMessage] = useState('');
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isSignedUp, setIsSignedUp] = useState(false);
 
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
 
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
-    const PatientRegForm = () => {
-        const [firstName, setFirstName] = useState('');
-        const [lastName, setLastName] = useState('');
-        const [email, setEmail] = useState('');
-        const [phoneNumber, setPhoneNumber] = useState('');
-        const [password, setPassword] = useState('');
-        const [confirm_password, setConfirm_Password] = useState('');
-        const [error, setError] = useState('');
-        const [message, setMessage] = useState('');
-        const [passwordVisible, setPasswordVisible] = useState(false);
-        const [isHovered, setIsHovered] = useState(false);
+  const inputStyle = {
+    background: 'none',
+    transition: 'all 0.5s ease-in-out',
+    // Set different styles when hovered
+    ...(isHovered && {
+      background: 'none',
+      color: '#1565C0',
+    }),
+  };
 
-        const { setUser } = useContext(UserContext);
+  const handlePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
 
-        // const handleSignup = (event) => {
-        //     event.preventDefault();
-        //     // Get user input from form
-        //     const firstName = event.target.elements.firstName.value;
-        //     const lastName = event.target.elements.lastName.value;
-        //     const email = event.target.elements.email.value;
+  const signUp = async (e) => {
+    e.preventDefault();
 
-        //     // Set the user's name and email
-        //     setUser({ firstName, lastName, email });
-        // };
+    if (
+      !firstName ||
+      !lastName ||
+      !email ||
+      !phoneNumber ||
+      !password ||
+      !confirm_password
+    ) {
+      setError('Please fill in all fields.');
+      return;
+    }
 
+    if (password !== confirm_password) {
+      setError('Passwords do not match');
+      return;
+    }
+    if (password.length < 8) {
+      setError('Password must be at least 8 characters');
+      return;
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setError('Please enter a valid email address');
+      return;
+    }
 
-        const handleMouseEnter = () => {
-            setIsHovered(true);
-        };
+    try {
+      const response = await fetch(
+        'https://vitals-8myt.onrender.com/vitals/patients/register',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            firstName,
+            lastName,
+            email,
+            phoneNumber,
+            password,
+            confirm_password,
+          }),
+          redirect: 'follow',
+        }
+      );
 
-        const handleMouseLeave = () => {
-            setIsHovered(false);
-        };
+      const data = await response.json();
 
-        const inputStyle = {
-            background: 'none',
-            transition: 'all 0.5s ease-in-out',
-            // Set different styles when hovered
-            ...(isHovered && {
-            background: 'none',
-            color: '#1565C0',
-            }),
-        };
-
-
-
-        const handlePasswordVisibility = () => {
-            setPasswordVisible(!passwordVisible);
-        };
-      
-        const signUp = async (e) => {
-          e.preventDefault();
-      
-          if (!firstName || !lastName || !email || !phoneNumber || !password || !confirm_password) {
-            setError('Please fill in all fields.');
-            return;
-          }
-      
-          if (password !== confirm_password) {
-            setError('Passwords do not match');
-            return;
-          }
-          if (password.length < 8) {
-            setError('Password must be at least 8 characters');
-            return;
-          }
-          if (!/\S+@\S+\.\S+/.test(email)){
-            setError('Please enter a valid email address');
-            return;
-          }
-      
-          try {
-            const response = await fetch('https://vitals-8myt.onrender.com/vitals/patients/register', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({
-                firstName,
-                lastName,
-                email,
-                phoneNumber,
-                password,
-                confirm_password
-              }),
-              redirect: 'follow',
-            });
-      
-            const data = await response.json();
-
-            if (data.success = true) {
-
-                console.log(data.message);
-                setMessage('Account Created Successfully... Proceed to Login');
-                setUser({ firstName, lastName, email, phoneNumber, password, confirm_password});
-
-            } else {
-                setMessage('User already registered')
-            }
-             // Handle the response as needed
-          } catch (error) {
-            setError(error.message);
-          }
-
-                // const firstName = e.target.elements.firstName.value;
-                // const lastName = e.target.elements.lastName.value;
-                // const email = e.target.elements.email.value;
-
-                
-        };
-      
-
-
-
-    
-    
-    // const [errors, setErrors] = useState({});
-    // const [dataIsCorrect, setDataIsCorrect] = useState(false);
-
-
-    // const handleChange = (event) => {
-    //     setValues({
-    //         ...values,
-    //         [event.target.name] : event.target.value,
-    //     })
-    // }
-
-    // const signUp = async (e) => {
-    //     e.preventDefault();
-    //     // let item = {firstName, lastName, email, phoneNumber, password, confirm_password}
-    //     // console.log(item);
-    //     // try{
-
-    //         const result = await axios.post("https://vitals-8myt.onrender.com/vitals/patients/register",{
-    //         firstName, lastName, email, phoneNumber, password, confirm_password,
-    //             }
-    //         );
-    
-    //        console.log(result);
-        // } catch 
-
-        // setErrors(validation(firstName, lastName, email, phoneNumber, password, confirm_password));
-        // setDataIsCorrect(true);
+      if (data.success === true) {
+        console.log(data.message);
+        setMessage('Account Created Successfully... Proceed to Login');
         
-        // <SignupFormSuccess />
+        setIsSignedUp(true);
+      } else {
+        setMessage('User already registered');
+      }
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+      
 
 
-        // useEffect(() => {
-        //     if(Object.keys(errors).length === 0 && dataIsCorrect) {
-        //         submitForm(true);
-        //     };
-        // },[errors]);
 
 
-return (
+
+  return (
     <div>
-        {message && <p className='error-success'>{message}</p>}
-        {error && <p className='error-text'>{error}</p>}
-        <form className='reg-form' id='reg-form'>
+      {message ? (
+        <SignUpFormSuccess />
+      ) : (
+        <div>
+          {message && <p className='error-success'>{message}</p>}
+          {error && <p className='error-text'>{error}</p>}
+          <form onSubmit={signUp} className='reg-form' id='reg-form'>
                     <div className='form-inputs'>
                         <div className='name-inputs'>
                             <div className='rightform-inputs'>
@@ -269,20 +220,20 @@ return (
                         <p>I accept all <span>Terms and Conditions</span></p>
                     </div>
                     <div className='form-submit'>
-                        <button type='submit' onClick={signUp}>
+                        <button type='submit'>
                             {/* <Link style={{textDecoration:"none", color:"#fff"}} to={'/patient-login'}> */}
                                 CREATE ACCOUNT
                             {/* </Link> */}
                             </button>
                     </div>
                 </form>
+                </div>
+      )}
     </div>
-  )
+  );
+};
 
 
-
-        
-    };
 
     export default PatientRegForm;
    
@@ -295,5 +246,3 @@ return (
 
 
 
-  
-// }

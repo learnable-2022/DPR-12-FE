@@ -1,16 +1,12 @@
 import React from 'react'
 import MaterialTable from 'material-table'
 
-export default function Table() {
+export default function Table({patientRecords}) {
 
     const data = [
-        {diagnosis: "Tuberculosis type II", hmo:"ROA Hospital", physician:"Dr. Miriam Jenna", last:"May 23rd,2023"},
-        {diagnosis: "Malaria & Typhoid", hmo:"UNTH, Enugu", physician:"Dr. Chizube Ejere", last:"May 23rd,2023"},
-        {diagnosis: "Measles Stage II", hmo:"Medvac Inc.", physician:"Dr. Tappi", last:"May 23rd,2023"},
-        {diagnosis: "Malaria & Typhoid", hmo:"ROA Hospital", physician:"Dr. Yemisi", last:"May 23rd,2023"},
-        {diagnosis: "Measles Stage I", hmo:"FMC Jabi", physician:"Dr. Ikenna Roberts", last:"May 23rd,2023"},
-        {diagnosis: "Measles Stage I", hmo:"FMC Jabi", physician:"Dr. Kemi Wilkinson", last:"May 23rd,2023"},
-        {diagnosis: "Axphysiation and Blocked Thorax", hmo:"UITH, Ibadan", physician:"Dr. Bolu Ajah", last:"May 23rd,2023"}
+        {diagnosis: patientRecords.HealthRecords[0]?.disease, hmo:"ROA Hospital", physician:"Dr. Kemi Wilkinson", last:patientRecords.HealthRecords[0]?.updatedAt},
+        {diagnosis: patientRecords.HealthRecords[1]?.disease, hmo:"ROA Hospital", physician:"Dr. Kemi Wilkinson", last:patientRecords.HealthRecords[1]?.updatedAt},
+        {diagnosis: patientRecords.HealthRecords[2]?.disease, hmo:"ROA Hospital", physician:"Dr. Kemi Wilkinson", last:patientRecords.HealthRecords[2]?.updatedAt},
     ]
     const columns = [
         {
@@ -20,7 +16,7 @@ export default function Table() {
             title:'HMO',field:'hmo',cellStyle:{fontSize:"14px", fontWeight:"300"}
         },
         {
-            title:'Physician',field:'physician',cellStyle:{fontSize:"14px", fontWeight:"300"}
+            title:'Doctor',field:'physician',cellStyle:{fontSize:"14px", fontWeight:"300"}
         },
         {
             title:'Last Update',field:'last',cellStyle:{fontSize:"14px", fontWeight:"300"}
@@ -31,12 +27,13 @@ export default function Table() {
   return (
     <div>
       <MaterialTable
-        title="Diagnosis history"
+        title="Diagnosis History"
         data={data}
         columns={columns}
         options={{
+          tableLayout:false,
           search:false,
-          paging:false,
+          paging:true,
           exportButton:false,
           selection:true,
           showSelectAllCheckbox:false,

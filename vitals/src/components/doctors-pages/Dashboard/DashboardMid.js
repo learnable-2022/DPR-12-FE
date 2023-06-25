@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import ani from '../../../images/dr.ani.svg'
 
 
-export default function DashboardMid() {
+export default function DashboardMid({docDetails}) {
 
   const ethers = require("ethers")
 
@@ -11,7 +11,7 @@ export default function DashboardMid() {
     const [message, setMessage] = useState("");
 
     async function requestAccount() {
-      setMessage('requesting account...')
+      // setMessage('requesting account...')
 
        // Check if MetaMask exists
 
@@ -52,43 +52,46 @@ export default function DashboardMid() {
   return (
     <div className='dash-mid-container'>
       <div className='dash-doc'>
-        <img className='doc-img' src={ani} alt=''/>
-        <div className='doctor-details'>    
-            <div className='doc-details'>
-                <h4>Dr. Jonathan Ani. S </h4>
-                <span className='doc-status'> <span className='dot'>•</span> Resident Doctor</span>
-            </div>
-            <div className='doc-info'>
-                <div>
+        <div className='dash-dash-doc'>
+          <img className='doc-img' src={ani} alt=''/>
+          
+          <div className='doctor-details'>    
+              <div className='doc-details'>
+                  <h4>Dr. {docDetails.data.firstName} {docDetails.data.lastName}</h4>
+                  <span className='doc-status'> <span className='dot'>•</span>Online</span>
+              </div>
+              <div className='doc-info'>
+                  <div>
 
-                    <label>Designation:</label><br />
-                    <p>Paediatrics</p>
-                </div>
-                <div>
+                      <label>Designation:</label><br />
+                      <p>{docDetails.data.specialty}</p>
+                  </div>
+                  <div>
 
-                    <label>Resident ID:</label><br />
-                    <p>SPKND-JANI</p>
-                </div>
-                <div>
+                      <label>Doctor ID:</label><br />
+                      <p>{docDetails.data._id}</p>
+                  </div>
+                  <div>
 
-                    <label>HMO:</label><br />
-                    <p>Enugu State University Teaching Hospital (Parklane)</p>
-                </div>
-            </div>
-            <div>
-              <p className='wallet-text'>Wallet Address: <span className='wallet-txt'>{walletAddress}</span></p>
-              <p className='green'>{message}</p>
-              <p className='error-text'>{errorMessage}</p>
-            </div>
+                      <label>License No:</label><br />
+                      <p>{docDetails.data.licenseNO}</p>
+                  </div>
+              </div>
+              <div>
+                <p className='wallet-text'>Wallet Address: <span className='wallet-txt'>{walletAddress}</span></p>
+                <p className='green'>{message}</p>
+                <p className='error-text'>{errorMessage}</p>
+              </div>
+          </div>
         </div>
 
-        <div>
-        <button
-        className='nav-btn'
-        onClick={requestAccount}
-        
-        >Connect Wallet</button>
-      </div>
+        <div className='dash-mid-button'>
+          <button
+          className='wallet-btn'
+          onClick={requestAccount}>
+          Connect Wallet
+          </button>
+        </div>
       </div>
       
     </div>

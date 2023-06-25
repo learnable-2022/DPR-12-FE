@@ -4,7 +4,10 @@ import Greeting from './greeting';
 import Vitals from './vitals';
 import Medications from './medications';
 import HospitalHistory from './hospitalhistory';
-import NewMultiForm from '../doctors-pages/NewRecord/NewMultiForm';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
+import CircularProgress from '@mui/material/CircularProgress';
+
 
 export default function Main() {
   const token = localStorage.getItem('user');
@@ -56,18 +59,23 @@ export default function Main() {
   }, [token]);
 
   if (!userDetails || !healthRecord) {
-    return <p>Loading...</p>;
+    return <Box sx={{ display: 'flex', margin: 'auto' }}>
+    <CircularProgress />
+  </Box>
   }
 
   return (
-    <div className='main'>
-      <Greeting userDetails={userDetails} />
-      <Vitals healthRecord={healthRecord} />
+    <div className='main-main'>
+      <div className='main'>
+        <Greeting userDetails={userDetails} />
+        <Vitals healthRecord={healthRecord} />
 
-      <div className='main-lower'>
-        <Medications />
-        <HospitalHistory />
+        <div className='main-lower'>
+          <Medications healthRecord={healthRecord} />
+          <HospitalHistory />
+        </div>
       </div>
     </div>
+    
   );
 }

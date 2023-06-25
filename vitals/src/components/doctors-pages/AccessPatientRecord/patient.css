@@ -1,0 +1,67 @@
+
+
+
+.main-patient-container {
+    border-radius: 12px;
+    width: 350px;
+    padding: 25px 20px;
+    max-width: 400px;
+    min-width: 200px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+    /* align-items: flex-start; */
+    background-image: linear-gradient(to right, #1976d2, #2c80d7, #3b8adc, #4994e1, #579ee5);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+}
+
+.doc-pat{
+    display: flex;
+    justify-self: center !important;
+}
+.doc-pat img{
+    width: 200px !important;
+    border-radius: 50%;
+}
+.doc-pat-text{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+.doc-pat-text h4{
+    font-size: 25px;
+    font-weight: 400;
+}
+.doc-pat-details{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.doc-pat-details p{
+    font-size: 14px;
+}
+.doc-pat-details p span{
+    font-size: 14px;
+    font-weight: 300;
+}
+.doc-pat-btn{
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 14px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+.doc-pat-btn:hover{
+    transform: translateY(0px);
+    opacity:1;
+}

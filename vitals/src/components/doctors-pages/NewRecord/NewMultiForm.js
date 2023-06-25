@@ -11,7 +11,7 @@ const NewMultiForm = () => {
   const [formData, setFormData] = useState({
     patient_id: "",
     patientWalletAddress: "",
-    doctorsID: "",
+    doctor_id: "",
     bloodPressure: "",
     oxygenLevel: "",
     heartRate: "",
@@ -142,7 +142,7 @@ const NewMultiForm = () => {
               <input
                 type="text"
                 name="doctorsID"
-                value={formData.doctorsID}
+                value={formData.doctor_id}
                 onChange={handleInputChange}
                 placeholder="e.g 1234567890"
               />

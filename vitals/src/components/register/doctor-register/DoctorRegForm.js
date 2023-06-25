@@ -3,24 +3,6 @@ import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined
 
 
 
-// export default function PatientRegForm() {
-
-    
-    // const [values, setValues] = useState({
-    //     firstName:"",
-    //     lastName:"",
-    //     email:"",
-    //     phoneNumber:"",
-    //     password:"",
-    //     confirm_password:"",
-    // })
-
-    // const [firstName, setFirstName] = useState("");
-    // const [lastName, setLastName] = useState("");
-    // const [email, setEmail] = useState("");
-    // const [phoneNumber, setPhoneNumber] = useState("");
-    // const [password, setPassword] = useState("");
-    // const [confirm_password, setConfirm_Password] = useState("");
 
     const DoctorRegForm = () => {
         const [firstName, setFirstName] = useState('');
@@ -80,6 +62,9 @@ import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined
           if (!/\S+@\S+\.\S+/.test(email)){
             setError('Please enter a valid email address');
           }
+          if (licenseNO.length > 11) {
+            setError('License number must be less than or equal to 11 characters long');
+          } 
       
           try {
             const response = await fetch('https://vitals-8myt.onrender.com/vitals/doctors/register', {
@@ -100,13 +85,10 @@ import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined
             const data = await response.json();
             console.log(data);
 
-            if (data.success = true) {
+            if (data.Success = true) {
 
-                console.log(data.message);
+                console.log(data);
                 setMessage('Account Created Successfully... Proceed to Login');
-
-            } else {
-                setMessage('User already registered')
             }
              // Handle the response as needed
           } catch (error) {
@@ -221,7 +203,7 @@ return (
                                     <input
                                         className='large-inputs' 
                                         type="text" 
-                                        placeholder='e.g +500023' 
+                                        placeholder='e.g 5000230901' 
                                         name='licenseNO' value={licenseNO} 
                                         onChange={(e) => setLicenseNO(e.target.value)}
                                     />

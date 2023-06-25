@@ -1,10 +1,13 @@
 import React, {useState} from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Popup from './Popup'
 import './Popup.css'
 import RecordTop from '../Records/RecordTop';
 import patientsData from '../../../patientsData.json'
 import '../doctorspages.css'
+import user from '../../../images/avatar-icon.jpeg'
+import profile from '../../../images/avatar-icon.jpeg'
+import './patient.css'
 
 
 export default function Patient(props) {
@@ -26,40 +29,24 @@ export default function Patient(props) {
   const navigate = useNavigate();
 
   const handleNavigate =() => {
-    // navigate('/patientrecords');
-    navigate(`/patientrecords?patientId=${patientsData.PatientID}`);
+    navigate(`/patientrecord?patient_id=${props.patient._id}`);
+
   }
 
   return (
-    <div className='main-patient'>
-      <div className='patient-wrap'>
-        <div className='patient-wrapper'>
-          <div className='patient-profile-details'>
-              <img className='avatar' src={`../../../../images/${props.image}`} alt='' />
-              <div className='profile-detailss'>
-                  <h6>{props.name}</h6>
-                  <p>Age: {props.age} years old  |  Gender: {props.gender}</p>
-              </div>
-          </div>
-          <div className='patient-actions'>
-              <div className='patient-btns'>
-                  <button onClick={handleNavigate} className='share-btn'>View Medical Records</button>
-                  {/* <button onClick={() => setButtonPopup(true)} className='nav-btn'>View Profile</button> */}
-              </div>
-          </div>
+    <div className='main-patient-container'>
+      <div className='doc-pat'>
+        <img src={profile} alt='' />
+      </div>
+      <div className='doc-pat-text'>
+        <h4>{props.patient.firstName} {props.patient.lastName}</h4>
+        <div className='doc-pat-details'>
+          <p>Patient ID: <br /> <span>{props.patient._id}</span> </p>
+          <p>Allergies: <br /> <span>{props.patient.allergies}</span> </p>
+          <p>Gender: <span></span>{props.patient.gender}</p>
         </div>
       </div>
-
-    {/* <Popup trigger={buttonPopup} setTrigger={setButtonPopup} >
-      <p className='popup-text'>{props.name} has to give you permission to view and edit their medical records</p>
-    </Popup>
-
-    <Popup trigger={buttonPopup} setTrigger={setButtonPopup} >
-      <p className='popup-text'>{props.name} has to give you permission to view and edit their medical records</p>
-    </Popup> */}
-
-
-
+      <button onClick={handleNavigate} className='doc-pat-btn'>VIEW PATIENT RECORD</button>
     </div>
   )
 }

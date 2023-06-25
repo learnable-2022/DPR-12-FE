@@ -7,6 +7,7 @@ import Mission from './mission'
 import Faq from './faq'
 import Transform from './transform'
 import Footer from './footer'
+import './landing.css'
 
 
 export default function Landing() {

@@ -77,6 +77,9 @@ import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined
             setError('Password must be at least 8 characters');
             return;
           }
+          if (registrationNo.length > 11) {
+            setError('License number must be less than or equal to 11 characters long');
+          } 
           // if (!/\S+@\S+\.\S+/.test(email)){
           //   setError('Please enter a valid email address');
           // }
@@ -234,7 +237,7 @@ return (
                                     <input
                                         className='large-inputs' 
                                         type="text" 
-                                        placeholder='e.g +2348102345678' 
+                                        placeholder='e.g 2000190293' 
                                         name='registrationNo' value={registrationNo} 
                                         onChange={(e) => setRegistrationNo(e.target.value)}
                                     />

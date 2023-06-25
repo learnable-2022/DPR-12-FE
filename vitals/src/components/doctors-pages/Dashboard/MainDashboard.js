@@ -3,14 +3,14 @@ import DashboardTop from './DashboardTop'
 import DashboardMid from './DashboardMid'
 import DashboardBottom from './DashboardBottom'
 
-export default function MainDashboard() {
+export default function MainDashboard({docDetails},{patients}) {
   return (
     <div>
         
         <div className='dashboard-stack'>
-            <DashboardTop />
-            <DashboardMid />
-            <DashboardBottom />   
+            <DashboardTop docDetails={docDetails} />
+            <DashboardMid docDetails={docDetails} />
+            <DashboardBottom patients={patients} />   
         </div>
 
     </div>

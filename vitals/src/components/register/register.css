@@ -73,14 +73,29 @@
 }
 
 .login{
-    text-decoration: none;
+    text-decoration: none !important;
     color: #fff !important;
     font-weight: 300;
     cursor: pointer;
 
 }
-.login:hover{
-    color: #121212 !important;
+.body-container >.nav-btn:hover .login{
+    color: #1976D2 !important;
+    font-weight: 300;
+    cursor: pointer;
+} 
+.body-container >.nav-btn:hover .login span{
+    color: #1976D2 !important;
+    font-weight: 300;
+    cursor: pointer;
+}
+.body-container >.nav-btn > .login:hover {
+    color: #1976D2 !important;
+    font-weight: 300;
+    cursor: pointer;
+}
+.login span:hover{
+    color: #1976D2 !important;
     font-weight: 300;
     cursor: pointer;
 

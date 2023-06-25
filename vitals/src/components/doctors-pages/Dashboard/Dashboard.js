@@ -3,12 +3,15 @@ import '../doctorspages.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import Sidebar from '../../doctors-pages/sidebar/sidebar'
 import MainDashboard from '../../doctors-pages/Dashboard/MainDashboard'
+import Box from '@mui/material/Box';
+import CircularProgress from '@mui/material/CircularProgress';
 
 export default function Dashboard() {
 
 
   const docToken = localStorage.getItem('doctor');
   const [docDetails, setDocDetails] = useState(null);
+  
 
   useEffect(() => {
     const fetchDocDetails = async () => {
@@ -35,7 +38,9 @@ export default function Dashboard() {
   
 
   if (!docDetails) {
-    return <p>Loading doc details...</p>;
+    return <Box sx={{ display: 'flex', margin: 'auto', left:'50%' }}>
+    <CircularProgress />
+  </Box>;
   }
 
 
@@ -45,7 +50,7 @@ export default function Dashboard() {
         <div className='access-patients-main'>
           <Sidebar />
           <div className='main-access'>
-            <MainDashboard />
+            <MainDashboard docDetails={docDetails} />
           </div>
         
         </div>
