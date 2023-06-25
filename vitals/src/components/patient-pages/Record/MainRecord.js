@@ -4,6 +4,8 @@ import profile from '../../../images/avatar-icon.jpeg'
 
 import './record.css'
 import Vitals from './vitals'
+import Medications from '../../main/medications'
+import HospitalHistory from '../../main/hospitalhistory'
 
 export default function MainRecord() {
   return (
@@ -18,7 +20,20 @@ export default function MainRecord() {
         <div className='record-vitals'>
             <Vitals /> 
         </div>
-        <div></div>
+        <div className='huge-container'>
+          <div className='huge'>
+            <Medications />
+            <div className='symptom-container'>
+              <div className='symptom'>
+                <h4>Signs and Symptoms:</h4>
+                <div className='symps'>
+                  <li> Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</li>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className='record-side-2'>
         <div className='record-2-img'>

@@ -300,11 +300,17 @@
     outline: none !important;
 }
 
+.profile-side{
+    width: 100%;
+}
+
 .profile-side p{
     font-size: 16px !important;
+    width: 100%;
 }
 .profile-side p span{
     font-size: 14px !important;
+    width: 100%;
 }
 .text-sided{
     width: 100%;
@@ -468,7 +474,7 @@
  /* -----ACCESS TOP STYLING---------------------------------------------------------------- */
 
     .acccesss{
-        width: 100%;
+        width: 100% !important;
     }
     .access-directory{
         font-size: 12px;
@@ -476,11 +482,11 @@
     }
     .access-top{
         /* position: relative; */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
         gap: 20px;
-        width: 100%;
+        width: 100% !important;
     }
     .search-side{
         width: 100%;
@@ -2082,14 +2088,8 @@
 
 
 
-
-
-
-
-/* Add this CSS to your main-records.css file or any other appropriate CSS file */
-
 .drug {
-    /* Your existing styles for the drug div */
+
     position: relative;
     transition: transform 0.3s ease-out;
   }
