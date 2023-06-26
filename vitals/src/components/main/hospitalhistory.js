@@ -24,7 +24,7 @@ export default function hospitalhistory() {
 
             <p className='light-text'>No Hospital History</p>
 
-            {/* <div className='indicators-container'>
+             <div className='indicators-container'>
                 <div className='row-container'>
                     <div className='row1'>
                         <div className='indicator bg-grey'></div>
@@ -56,7 +56,7 @@ export default function hospitalhistory() {
                         <div className='indicator bg-blue'></div>
                         <div className='indicator bg-grey'></div>
                     </div>
-                    <div className='row1'>
+                    {/* <div className='row1'>
                         <div className='indicator bg-grey'></div>
                         <div className='indicator bg-red'></div>
                         <div className='indicator bg-green'></div>
@@ -85,7 +85,7 @@ export default function hospitalhistory() {
                         <div className='indicator bg-grey'></div>
                         <div className='indicator bg-green'></div>
                         <div className='indicator bg-grey'></div>
-                    </div>
+                    </div> */}
                     <div className='row1 last-item'>
                         <div className='month'>May</div>
                         <div className='month'>Jun</div>
@@ -97,7 +97,7 @@ export default function hospitalhistory() {
                         <div className='month'>Dec</div>
                     </div>
                 </div>
-            </div>    */}
+            </div>    
       </div>
             
       

@@ -67,9 +67,11 @@
 }
 
 .dashboard-stack{
+    height: 100%;
     width: 100% !important;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 30px;
     position: relative;
     /* padding-bottom: 50px; */
@@ -300,11 +302,14 @@
     outline: none !important;
 }
 
+
 .profile-side p{
     font-size: 16px !important;
+    width: 100%;
 }
 .profile-side p span{
     font-size: 14px !important;
+    width: 100%;
 }
 .text-sided{
     width: 100%;
@@ -2082,14 +2087,8 @@
 
 
 
-
-
-
-
-/* Add this CSS to your main-records.css file or any other appropriate CSS file */
-
 .drug {
-    /* Your existing styles for the drug div */
+
     position: relative;
     transition: transform 0.3s ease-out;
   }

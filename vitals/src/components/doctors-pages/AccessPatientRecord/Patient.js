@@ -10,7 +10,7 @@ import profile from '../../../images/avatar-icon.jpeg'
 import './patient.css'
 
 
-export default function Patient(props) {
+export default function Patient(props, {patients}) {
 
   
   const handleCancel = () => {

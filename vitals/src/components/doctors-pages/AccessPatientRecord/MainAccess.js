@@ -79,7 +79,7 @@ export default function MainAccess(props) {
             <p>You have no patient history.</p>
           ) : (
             patients.map((patient) => (
-              <Patient key={patient._id} patient={patient} />
+              <Patient patients={patients} key={patient._id} patient={patient} />
             ))
           )}
         </div>

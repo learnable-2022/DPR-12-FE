@@ -62,10 +62,6 @@ export default function Sidebar() {
                       <FolderSharedOutlinedIcon className='nav-link-icon' />
                       <span className='nav-logo-name'>Patients</span>
                     </NavLink>
-                    <NavLink to='/appointments' className='nav-link'>
-                      <GroupOutlinedIcon className='nav-link-icon' />
-                      <span className='nav-logo-name'>Profile</span>
-                    </NavLink>
                   </div>
                 </div>
 

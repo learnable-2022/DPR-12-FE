@@ -1,5 +1,5 @@
 import React from 'react';
-import './main.css';
+import '../../main/main.css';
 
 export default function Medications({ healthRecord }) {
   console.log(healthRecord); // Check the structure of the healthRecord object

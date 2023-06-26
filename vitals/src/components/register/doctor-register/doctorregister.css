@@ -233,3 +233,44 @@
     color: #1976D2;
     font-size: 14px;
 }
+
+.large-inputt {
+    position: relative;
+  }
+  
+  .large-inputt select {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    font-size: 16px;
+  }
+  
+  /* Custom arrow */
+  /* .large-inputt::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: #999 transparent transparent transparent;
+    pointer-events: none;
+  } */
+  
+  /* Hover state */
+  .large-inputt:hover select {
+    border: .5px solid #777777;
+  }
+  
+  /* Focus state */
+  .large-inputt select:focus {
+    outline: none;
+
+  }
