@@ -9,6 +9,7 @@ export default function Record() {
 
   const token = localStorage.getItem('user');
   const [userDetails, setUserDetails] = useState(null);
+  const [healthRecord, setHealthRecord] = useState(null);
 
   useEffect(() => {
     const fetchUserDetails = async () => {
@@ -32,7 +33,29 @@ export default function Record() {
     fetchUserDetails();
   }, [token]);
 
-  if (!userDetails ) {
+  useEffect(() => {
+    const fetchHealthRecord = async () => {
+      try {
+        const healthResponse = await fetch('https://vitals-8myt.onrender.com/vitals/patients/healthRecords', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        if (!healthResponse.ok) {
+          throw new Error('Error fetching health record');
+        }
+        const healthData = await healthResponse.json();
+        console.log(healthData);
+        setHealthRecord(healthData);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchHealthRecord();
+  }, [token]);
+
+  if (!userDetails || !healthRecord) {
     return <Box sx={{ display: 'flex', margin: 'auto' }}>
     <CircularProgress />
   </Box>
@@ -44,7 +67,7 @@ export default function Record() {
     <div>
       <div className='hcp-main'>
         <Sidebar />
-        <MainRecord  userDetails={userDetails}/>
+        <MainRecord  userDetails={userDetails} healthRecord={healthRecord}/>
       </div>
     </div>
   )

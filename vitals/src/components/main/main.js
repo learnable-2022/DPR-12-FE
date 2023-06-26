@@ -71,8 +71,8 @@ export default function Main() {
         <Vitals healthRecord={healthRecord} />
 
         <div className='main-lower'>
-          <Medications healthRecord={healthRecord} />
-          <HospitalHistory />
+          <Medications healthRecord={healthRecord} userDetails={userDetails} />
+          <HospitalHistory userDetails= {userDetails}/>
         </div>
       </div>
     </div>

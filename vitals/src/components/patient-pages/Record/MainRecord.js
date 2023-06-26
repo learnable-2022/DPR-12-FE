@@ -7,7 +7,7 @@ import Vitals from './vitals'
 import Medications from './medications'
 import HospitalHistory from '../../main/hospitalhistory'
 
-export default function MainRecord({userDetails}) {
+export default function MainRecord({userDetails}, {healthRecord}) {
 
   return (
     <div className='person-record'>
@@ -19,11 +19,11 @@ export default function MainRecord({userDetails}) {
         </div>
         
         <div className='record-vitals'>
-            <Vitals userDetails={userDetails} /> 
+            <Vitals userDetails={userDetails} healthRecord={healthRecord} /> 
         </div>
         <div className='huge-container'>
           <div className='huge'>
-            <Medications userDetails={userDetails} />
+            <Medications userDetails={userDetails} healthRecord={healthRecord} />
             <div className='symptom-container'>
               <div className='symptom'>
                 <h4>Latest Signs and Symptoms:</h4>
