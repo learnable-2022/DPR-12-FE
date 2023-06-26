@@ -67,9 +67,11 @@
 }
 
 .dashboard-stack{
+    height: 100%;
     width: 100% !important;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 30px;
     position: relative;
     /* padding-bottom: 50px; */
@@ -300,9 +302,6 @@
     outline: none !important;
 }
 
-.profile-side{
-    width: 100%;
-}
 
 .profile-side p{
     font-size: 16px !important;
@@ -474,7 +473,7 @@
  /* -----ACCESS TOP STYLING---------------------------------------------------------------- */
 
     .acccesss{
-        width: 100% !important;
+        width: 100%;
     }
     .access-directory{
         font-size: 12px;
@@ -482,11 +481,11 @@
     }
     .access-top{
         /* position: relative; */
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         gap: 20px;
-        width: 100% !important;
+        width: 100%;
     }
     .search-side{
         width: 100%;

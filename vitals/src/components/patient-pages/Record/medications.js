@@ -1,13 +1,13 @@
 import React from 'react';
-import './main.css';
+import '../../main/main.css';
 
-export default function Medications({ healthRecord }) {
-  console.log(healthRecord); // Check the structure of the healthRecord object
+export default function Medications({userDetails}) {
+  console.log(userDetails); // Check the structure of the userDetails object
   const hasMedicalHistory =
-    healthRecord && healthRecord.HealthRecords && healthRecord.HealthRecords.length > 0;
+    userDetails && userDetails.HealthRecords && userDetails.HealthRecords.length > 0;
 
   const filteredRecords = hasMedicalHistory
-    ? healthRecord.HealthRecords.filter(
+    ? userDetails.HealthRecords.filter(
         (record) => record.medicationName !== '' && record.dosage !== ''
       )
     : [];

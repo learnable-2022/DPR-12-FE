@@ -4,7 +4,7 @@ import MaterialTable from 'material-table'
 export default function Table({patientRecords}) {
 
     const data = [
-        {diagnosis: patientRecords.HealthRecords[0]?.disease, hmo:"ROA Hospital", physician:"Dr. Kemi Wilkinson", last:patientRecords.HealthRecords[0]?.updatedAt},
+        {diagnosis: patientRecords.HealthRecords[0].disease, hmo:"ROA Hospital", physician:"Dr. Kemi Wilkinson", last:patientRecords.HealthRecords[0]?.updatedAt},
         {diagnosis: patientRecords.HealthRecords[1]?.disease, hmo:"ROA Hospital", physician:"Dr. Kemi Wilkinson", last:patientRecords.HealthRecords[1]?.updatedAt},
         {diagnosis: patientRecords.HealthRecords[2]?.disease, hmo:"ROA Hospital", physician:"Dr. Kemi Wilkinson", last:patientRecords.HealthRecords[2]?.updatedAt},
     ]

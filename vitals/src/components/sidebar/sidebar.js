@@ -63,14 +63,14 @@ export default function Sidebar() {
                       <LayersOutlinedIcon className='nav-link-icon' />
                       <span className='nav-logo-name'>Records</span>
                     </NavLink>
-                    <NavLink to='/notifications' className='nav-link'>
+                    {/* <NavLink to='/notifications' className='nav-link'>
                       <NotificationsOutlinedIcon className='nav-link-icon' />
                       <span className='nav-logo-name'>Notifications</span>
                     </NavLink>
                     <NavLink to='/patient-profile' className='nav-link'>
                       <GroupOutlinedIcon className='nav-link-icon' />
                       <span className='nav-logo-name'>Profile</span>
-                    </NavLink>
+                    </NavLink> */}
                   </div>
                 </div>
 
